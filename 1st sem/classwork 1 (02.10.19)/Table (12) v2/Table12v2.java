@@ -1,15 +1,17 @@
 public class Table12v2 {
 	public static void main(String[] args) {
-		int n = Integer.parseInt(args[0]);
 		if (args.length == 1) {
+			int n = Integer.parseInt(args[0]);
 			for (int i = 1; i <= 9; i++) {
 				for (int j = 1; j<=n; j++) {
-					System.out.print(j + "*" + i + "=" + i*j + "  ");
+					int maxMult = j*9 + 1;
+					//add variable to string? replace "10" to "maxMult"
+					System.out.printf("%-10s", j + "*" + i + "=" + i*j);
 			};
-			System.out.println();
+			System.out.printf("%n");
 			};			
 		} else   {
-			System.out.println("Enter only one positive argument");
+			System.out.println("Enter one positive argument");
 		}
 	}
 }
