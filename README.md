@@ -1,2 +1,2 @@
 # home-tasks-from-KFU
-java hometasks
+rep for java hometasks
