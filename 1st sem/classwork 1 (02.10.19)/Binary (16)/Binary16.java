@@ -3,18 +3,18 @@ public class Binary16 {
 		if (args.length == 1) {
 			int number = Integer.parseInt(args[0]);
 			int k = 0;
-			int binary[];
+			StringBuffer binary = new StringBuffer("");
 			while (number > 0) {
 				binary.insert(0, number % 2);
-				if (binary[0] == 1) {
+				if (binary.charAt(0) == '1') {
 					k++;
 				};
 				number = number / 2;
-				for (i = 0; i < binary.length() - 1; i++) {
-					System.out.print(binary[i]);
-				};
-			 System.out.println(k);
 			};
+			for (int i = 0; i <= binary.length() - 1; i++) {
+					System.out.print(binary.charAt(i));
+				}; 
+			System.out.println("\nNumber of units: " + k);
 
 		} else {
 			System.out.println("Enter one argument");
