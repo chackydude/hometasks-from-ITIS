@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class CompareTo {
+public class CompareToIgnore {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 		String str1 = input.nextLine();
@@ -19,11 +19,13 @@ public class CompareTo {
 				break;
 			}
 			// if strings arn't equals, but have equal lengths
-			if (str1.charAt(i) != str2.charAt(i)) {
+			// with case ignore
+			if (Math.max(str1.charAt(i), str2.charAt(i)) - 32 != Math. min(str1.charAt(i), str2.charAt(i))) {
 				System.out.println(str1.charAt(i) - str2.charAt(i));
 				break;
 			} else continue;
 		}
 	}
 }
+
 
