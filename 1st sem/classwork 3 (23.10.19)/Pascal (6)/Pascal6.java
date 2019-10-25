@@ -3,23 +3,12 @@ public class Pascal6 {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 		int height = input.nextInt();
-		int sumDigit = 0;
-		//вычисляем количство цифр в последней строке, нумерация строк начинается с 0
-		for (int j = 0; j < height; j++) {
-				int countDigit = 0;
-				double number = calcFact(height-1) / (calcFact(j)*calcFact(height-1-j)); 
-				do {
-					number = number / 10;
-					countDigit++;
-				} while (number > 9);
-				sumDigit = sumDigit + countDigit;				
-		};
-		sumDigit = sumDigit + height; // учет пробелов после цифр
-		// sumDigit = sumDigit / 2;
-		System.out.println(sumDigit);
+
+		int maxLen = calcLen(height); // определяем длину наибольшей строки
 
 		for (int i = 0; i <= height; i++) {
-			for (int g = 0; g < ((sumDigit)/2 - i - 1); g++) {
+			for (int g = 0; g < (maxLen - calcLen(g))/2; g++) {
+				System.out.print(calcLen(g));
 				System.out.print('*');
 			};
 
@@ -32,11 +21,26 @@ public class Pascal6 {
 		};
 	};
 
-	public static long calcFact(long num) {
+	// вычисление факториаоа
+	public static int calcFact(int num) {
 		if (num < 0) return -1;
  		if (num == 0) return 1; 
 		return num * calcFact(num-1);
 	};
+	// вычисление количсетва символов в строке
+	public static int calcLen(int num) {
+		int sumDigit = 0;
+		for (int j = 0; j < num; j++) {
+		int countDigit = 0;
+		double number = calcFact(num-1) / (calcFact(j)*calcFact(num-1-j)); 
+				do {
+					number = number / 10;
+					countDigit++;
+				} while (number > 9);
+				sumDigit = sumDigit + countDigit;
+		};
+		return sumDigit;
+	}
 }
 
 // TODO количсетво пробелов перед строкой - это разность количества символов 
