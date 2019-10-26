@@ -8,15 +8,15 @@ public class Reverse4 {
 			str = input.nextLine();
 		};
 
-		/*Класс StringBuffer представляет расширяемые и доступные 
+		/*Класс StringBuilder представляет расширяемые и доступные 
 		для изменений последовательности символов, позволяя вставлять 
 		символы и подстроки в существующую строку и в любом месте. 
 		Данный класс гораздо экономичнее в плане потребления памяти 
 		и настоятельно рекомендуется к использованию.*/
 
-		StringBuffer reverse = new StringBuffer("");
+		StringBuilder reverse = new StringBuilder("");
 
-		// Метод insert(pos, char) вставляет в StringBuffer на позицию pos символ char (можно boolean, int, float)
+		// Метод insert(pos, char) вставляет в StringBuilder на позицию pos символ char (можно boolean, int, float)
  
 		for (int i = 0; i < str.length(); i++) {
 			reverse.insert(0, str.charAt(i));
