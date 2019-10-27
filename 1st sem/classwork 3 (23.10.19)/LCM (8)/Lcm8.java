@@ -7,7 +7,7 @@ public class Lcm8 {
 		int number1 = input.nextInt();
 		int number2 = input.nextInt();
 		boolean flag = true;
-		int result = Math.min(number1, number2);
+		int result = Math.max(number1, number2);
 
 		while (flag) {
 			if ((result % number1 == 0) && (result % number2 == 0)) {
