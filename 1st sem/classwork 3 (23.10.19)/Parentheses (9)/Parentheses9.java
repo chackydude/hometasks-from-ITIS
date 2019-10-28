@@ -20,35 +20,23 @@ public class Parentheses9 {
 
 		// };
 		// System.out.println(count1 == count2);
-
 		for (int i = 0; i < str.length(); i++) {
-			if (findParenthese(i, str)) {
-				continue;
-			} else {
-				flag = false;
-				System.out.println(flag);
-				break;
-			}
-		};
-		if (flag) {
-			System.out.println(flag);
-		};
+			
+		}
 	}
 
 	// функция поиска споряженных скобок, нашли - true, иначе - false
-	public static boolean findParenthese(int i, String str) {
+	public static int findParenthese(int i, String str) {
 		for (int j = i; j < str.length(); j++) {
-			if (str.charAt(i) == '(') {
 				switch (str.charAt(j)) {
 					case ('('): 
 						return findParenthese(j, str);
 						break;
 					case (')'):
-						return true;
+						return j;
 						break;
 					default: 
-						return false;
-				};
+						return -1;
 			};
 		};
 	}
