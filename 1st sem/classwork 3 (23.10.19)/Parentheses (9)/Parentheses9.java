@@ -8,16 +8,20 @@ public class Parentheses9 {
 		for (int i = 0; i < str.length(); i++) {
 			if (findParenthese2(i, str) == -1) {
 				System.out.println(false);
+				flag = false;
 				break;
-			}
-		}
-
+			} else i = findParenthese2(i, str);
+		};
+	 if (flag) {
+	 	System.out.println(flag);
+	 };
 }
 
 // функция, которая ищет для каждой открывающей скобки '(' парную закрывающую ')'
 // возвращает саму себя, если найдена еще одна открывающая скобка '('
 // возвращает позицию следующую после найденной	парной закрывающей скобки
 // возвразщает -1 если парная скобка не найдена
+
 	public static int findParenthese2(int i, String str) {
 		int output = -1;
 		if (str.charAt(i) == '(') {
