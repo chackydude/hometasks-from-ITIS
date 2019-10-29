@@ -5,21 +5,27 @@ public class Parentheses9 {
 		String strInput = input.nextLine();
 		StringBuilder str = new StringBuilder(strInput);
 
-		boolean flag = true;
-		// проходим по всей строке
+		// boolean flag = true;
+		// // проходим по всей строке
+		// for (int i = 0; i < str.length(); i++) {
+		// 	// если не найдено парной для последней '(' закрывающей ')'
+		// 	if (findParenthese2(i, str) == -1) {
+		// 		flag = false;
+		// 		System.out.println(flag);
+		// 		break;
+		// 	// если нашли закрывающую ')', о удаляем часть строки от последней '(' до ')'
+		// 	} else i = findParenthese2(i, str);
+		// };
+	 // // если есть какое-то несоответствие в строке
+	 // if (flag) {
+	 // 	System.out.println(flag);
+	 // };
 		for (int i = 0; i < str.length(); i++) {
-			// если не найдено парной для последней '(' закрывающей ')'
-			if (findParenthese2(i, str) == -1) {
-				flag = false;
-				System.out.println(flag);
-				break;
-			// если нашли закрывающую ')', о удаляем часть строки от последней '(' до ')'
-			} else i = findParenthese2(i, str);
+			if (str.charAt(i) == ')') {
+			findParenthese(i, str);					
+			}	
 		};
-	 // если есть какое-то несоответствие в строке
-	 if (flag) {
-	 	System.out.println(flag);
-	 };
+		System.out.println(str);
 }
 
 // функция, которая ищет для каждой открывающей скобки '(' парную закрывающую ')'
@@ -51,4 +57,14 @@ public class Parentheses9 {
 
  		return output;
   }
+  // удаляет все между скобками 
+
+  	public static void findParenthese(int i, StringBuilder str) {
+  		int k = i;
+  		while (str.charAt(k) != '(' && k>0) {
+  			k--;
+  		};
+		str.delete(k, i+1); // в конце делитает на +1 
+		i = k;
+    }
 }
