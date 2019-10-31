@@ -4,15 +4,16 @@ public class Dividers7 {
 		Scanner input = new Scanner(System.in);
 		int number = input.nextInt();
 
+		// цикл до корня числа, для вывода всех делителей числа
 		for (int i = 1; i <= Math.ceil(Math.sqrt(number)) + 1; i++) {
 			if (number % i == 0) {
 				System.out.print(i);
 				System.out.print(' ');
+				if (number / i != i) {
+				 	System.out.print(number / i);
+				}
+				System.out.print(' ');
 			};
-		};
-		if (number % 2 == 0) {
-			System.out.print(number / 2);
-			System.out.print(' ');
 		};
 
 		//второй способ 
@@ -27,7 +28,5 @@ public class Dividers7 {
 		// };
 
 		// int result = inputValue1 * inputValue2 / (number1 + number2)
-
-		System.out.print(number);
 	}
 }
