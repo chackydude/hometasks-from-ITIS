@@ -10,7 +10,6 @@ public class Pascal6 {
 			for (int g = 0; g < Math.ceil((maxLen - calcLen(i))/2); g++) {
 				System.out.print(' ');
 			};
-
 			for (int j = 0; j <= i; j++) {
 				System.out.print(calcFact(i) / (calcFact(j)*calcFact(i-j))); // печать числа в строке треугольника Паскаля
 				System.out.print(' '); // пробел после числа

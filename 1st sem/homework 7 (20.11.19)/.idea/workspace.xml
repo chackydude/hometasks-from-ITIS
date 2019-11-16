@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e26eadf5-e8f1-46a0-93ab-cadb702a419e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/All tasks for 7th homework/src/Copy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reverse/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reverse/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reverse/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reverse/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reverse/Reverse.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reverse/out/production/Reverse/Reverse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reverse/src/Reverse.java" beforeDir="false" />
-    </list>
+    <list default="true" id="e26eadf5-e8f1-46a0-93ab-cadb702a419e" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
