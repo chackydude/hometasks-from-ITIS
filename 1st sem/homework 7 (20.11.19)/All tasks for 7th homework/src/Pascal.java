@@ -2,7 +2,7 @@ import java.util.Scanner;
 public class Pascal {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.println("Enter height of Pascal's triangle");
+        System.out.println("Enter height of Pascal's triangle:");
         long height = input.nextInt();
 
         /* length of the max array */
