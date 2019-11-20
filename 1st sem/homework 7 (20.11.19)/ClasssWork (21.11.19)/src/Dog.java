@@ -1,3 +1,4 @@
+// package ru.kpfu.ITIS.trofimoff.dog - how to send to the package
 import java.util.Date;
 
 public class Dog {

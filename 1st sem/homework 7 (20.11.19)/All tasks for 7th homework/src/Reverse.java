@@ -2,7 +2,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Reverse {
-    public static void main(String[] args) {
+    public void startReverse() {
         System.out.println("Enter array's length");
         Scanner input = new Scanner(System.in);
         int n = input.nextInt();
@@ -18,7 +18,7 @@ public class Reverse {
         System.out.println(Arrays.toString(reverseArray(array)));
     }
 
-    public static int[] reverseArray(int[] array) {
+    public int[] reverseArray(int[] array) {
         int[] reversed = Arrays.copyOf(array, array.length);
         int buffer;
         for (int i = 0; i < array.length/2; i++) {

@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Fibonachi {
-    public static void main(String[] args) {
+    public void startFib() {
         System.out.println("Enter number of the Fibonacci's sequence:");
         Scanner input = new Scanner(System.in);
         int number = input.nextInt();
@@ -9,7 +9,7 @@ public class Fibonachi {
         System.out.println(getValueOfFib(number - 1));
     }
     /*create array "cache" to save all members of sequence until the n*/
-    public static int getValueOfFib(int n) {
+    public int getValueOfFib(int n) {
         int[] cache = new int[n + 1];
         for (int i = 0; i <= n; i++) {
             if (i < 2) {
@@ -22,7 +22,7 @@ public class Fibonachi {
     }
 
     /*calculate the sequence's number with using array of previous values*/
-    public static int calculateFib(int[] cache, int n) {
+    public int calculateFib(int[] cache, int n) {
         if (cache[n] >= 0) {
             return cache[n];
         }

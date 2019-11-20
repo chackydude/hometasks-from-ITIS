@@ -1,6 +1,6 @@
 import java.util.Scanner;
 public class Pascal {
-    public static void main(String[] args) {
+    public void startPascal() {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter height of Pascal's triangle:");
         long height = input.nextInt();
@@ -28,7 +28,7 @@ public class Pascal {
     };
 
     /* calculating factorial */
-    public static long calcFact(long num) {
+    public long calcFact(long num) {
         long f = 1;
         for (long i = num; i > 0; i--) {
             f = f * i;
@@ -36,7 +36,7 @@ public class Pascal {
         return f;
     };
     /* calculating quantity of the number in the string */
-    public static long calcLen(long num) {
+    public long calcLen(long num) {
         // variable what
         long sumDigit = 0;
         for (long j = 0; j <= num; j++) {
@@ -47,7 +47,7 @@ public class Pascal {
         return sumDigit + num - 1;
     }
     /*calculate length of the number*/
-    public static long lengthOfNumber(long number) {
+    public long lengthOfNumber(long number) {
         long countDigit = 0;
         while (number > 0) {
             number = number / 10;

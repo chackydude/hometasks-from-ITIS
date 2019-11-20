@@ -2,7 +2,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Copy {
-    public static void main(String[] args) {
+    public void startCopy() {
         System.out.println("Enter array's length");
         Scanner input = new Scanner(System.in);
         int n = input.nextInt();
@@ -19,7 +19,7 @@ public class Copy {
         }
     }
 
-    public static int[] copyArray(int[] array) {
+    public int[] copyArray(int[] array) {
         int copyLength = 0;
         for (int i = 0; i < array.length; i = i + 2) {
             if (array[i] % 2 == 0) {
