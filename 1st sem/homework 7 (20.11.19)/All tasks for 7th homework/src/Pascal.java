@@ -21,7 +21,7 @@ public class Pascal {
                 /* gap between two numbers */
                 System.out.print(' ');
             };
-            /* go to thw new string */
+            /* go to the new string */
             System.out.println();
         };
 
