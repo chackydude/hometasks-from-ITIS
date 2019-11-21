@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-// TODO написать метод lengtOfNumber - для вычисления длины числа
+// TODO написать метод lengthOfNumber - для вычисления длины числа
 // TODO написать сетод lengthOfLine - для вычисления длины всей строки (массива)
 // TODO реализовать логику вычисления элементов масива каждой строки
 public class Pascal2 {
