@@ -1,5 +1,6 @@
 // package ru.kpfu.ITIS.trofimoff.dog - how to send to the package
 import java.util.Date;
+import java.util.Objects;
 
 public class Dog {
     public String breed;
@@ -12,6 +13,48 @@ public class Dog {
     public int training;
     public int weight;
     public Date birthDate;
+
+    @Override
+    public String toString() {
+        return "Dog{" +
+                "breed='" + breed + '\'' +
+                ", color='" + color + '\'' +
+                ", eyeColor='" + eyeColor + '\'' +
+                ", gender='" + gender + '\'' +
+                ", name='" + name + '\'' +
+                ", height=" + height +
+                ", hunger=" + hunger +
+                ", training=" + training +
+                ", weight=" + weight +
+                ", birthDate=" + birthDate +
+                '}';
+    }
+
+    // how it works!?
+    @Override
+    public boolean equals(Object o) {
+        // check
+        if (this == o) return true;
+        // check availiblity of the link(!= null) and check type of Object
+        if (o == null || getClass() != o.getClass()) return false;
+        Dog dog = (Dog) o;
+        return height == dog.height &&
+                hunger == dog.hunger &&
+                training == dog.training &&
+                weight == dog.weight &&
+                Objects.equals(breed, dog.breed) &&
+                Objects.equals(color, dog.color) &&
+                Objects.equals(eyeColor, dog.eyeColor) &&
+                Objects.equals(gender, dog.gender) &&
+                Objects.equals(name, dog.name) &&
+                Objects.equals(birthDate, dog.birthDate);
+    }
+
+    @Override
+    // return's ID of Object
+    public int hashCode() {
+        return Objects.hash(breed, color, eyeColor, gender, name, height, hunger, training, weight, birthDate);
+    }
 
     public void bark() {
         System.out.println("Haw! Rrrrr-rrr, I'm " + name + '!');
@@ -76,7 +119,7 @@ public class Dog {
         return weight;
     }
 
-    //setterss
+    //setters
     public void setBirthDate(Date birthDate) {
         this.birthDate = birthDate;
     }

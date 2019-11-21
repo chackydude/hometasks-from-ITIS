@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e26eadf5-e8f1-46a0-93ab-cadb702a419e" name="Default Changelist" comment="" />
+    <list default="true" id="e26eadf5-e8f1-46a0-93ab-cadb702a419e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/All tasks for 7th homework/out/production/Reverse/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/All tasks for 7th homework/out/production/Reverse/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/All tasks for 7th homework/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/All tasks for 7th homework/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClasssWork (21.11.19)/out/production/ClasssWork (21.11.19)/Dog.class" beforeDir="false" afterPath="$PROJECT_DIR$/ClasssWork (21.11.19)/out/production/ClasssWork (21.11.19)/Dog.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClasssWork (21.11.19)/src/Dog.java" beforeDir="false" afterPath="$PROJECT_DIR$/ClasssWork (21.11.19)/src/Dog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClasssWork (21.11.19)/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/ClasssWork (21.11.19)/src/Main.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +23,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -41,6 +49,7 @@
       <updated>1573926070518</updated>
       <workItem from="1573926074878" duration="106000" />
       <workItem from="1573928385057" duration="660000" />
+      <workItem from="1574367465657" duration="270000" />
     </task>
     <servers />
   </component>

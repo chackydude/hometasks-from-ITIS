@@ -27,18 +27,24 @@ public class Main {
 
     //main running method
     public void start() {
-        if (inputScanner.equals("Fibonachi")) {
-            fib.startFib();
-        } else if (inputScanner.equals("Reverse")) {
-            reverse.startReverse();
-        } else if (inputScanner.equals("Pascal")) {
-            pascal.startPascal();
-        } else if (inputScanner.equals("Copy")) {
-            copy.startCopy();
-        } else if (inputScanner.equals("Exit")) {
-            System.exit(0);
-        } else {
-            System.out.println("Unknown command");
+        switch (inputScanner) {
+            case "Fibonachi":
+                fib.startFib();
+                break;
+            case "Reverse":
+                reverse.startReverse();
+                break;
+            case "Pascal":
+                pascal.startPascal();
+                break;
+            case "Copy":
+                copy.startCopy();
+                break;
+            case "Exit":
+                System.exit(0);
+            default:
+                System.out.println("Unknown command");
+                break;
         }
     }
 }
