@@ -11,13 +11,13 @@ public class Pascal2 {
         int[][] cache = new int[height][height];
         // fill our cache
         for (int i = 0; i < height; i++) {
-                cache[i] = calcArray(i);
+            cache[i] = calcArray(i);
         };
         // length of the last line
-        long maxLen = calcLen(height);
+        long maxLen = calcLenOfLine(cache[height-1]);
         // output
         for (int i = 0; i < height; i++) {
-            for (int g = 0; g < Math.ceil((maxLen - calcLen(i))/2); g++) {
+            for (int g = 0; g < Math.ceil((float)(maxLen - calcLenOfLine(cache[i]))/2); g++) {
                 System.out.print(' ');
             };
             for (int k = 0; k < cache[i].length; k++) {
@@ -40,7 +40,7 @@ public class Pascal2 {
     }
 
     // method which calculates quantity of the digits in the number
-    public static long lengthOfNumber(long number) {
+    public static long calcLenhOfNumber(long number) {
         long countDigit = 0;
         while (number > 0) {
             number = number / 10;
@@ -49,24 +49,12 @@ public class Pascal2 {
         return countDigit;
     }
 
-    /* calculating quantity of the numbers in the string */
-    public static long calcLen(long num) {
-        // variable what
-        long sumDigit = 0;
-        for (long j = 0; j <= num; j++) {
-            long number = calcFact(num) / (calcFact(j)*calcFact(num-j));
-            sumDigit = sumDigit + lengthOfNumber(number);
-        };
-        /* quantity of the numbers and spases in the string */
-        return sumDigit + num - 1;
+    //method which calculates length if one line, only digits and spaces
+    public static long calcLenOfLine(int[] array) {
+        long len = 0;
+        for (int i = 0; i < array.length; i++) {
+            len = len + calcLenhOfNumber(array[i]);
+        }
+        return len + array.length;
     }
-
-    /* calculating factorial */
-    public static long calcFact(long num) {
-        long f = 1;
-        for (long i = num; i > 0; i--) {
-            f = f * i;
-        };
-        return f;
-    };
 }
