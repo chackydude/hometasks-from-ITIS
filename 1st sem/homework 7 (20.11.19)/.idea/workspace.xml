@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e26eadf5-e8f1-46a0-93ab-cadb702a419e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/All tasks for 7th homework/out/production/Reverse/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/All tasks for 7th homework/out/production/Reverse/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/All tasks for 7th homework/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/All tasks for 7th homework/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClasssWork (21.11.19)/out/production/ClasssWork (21.11.19)/Dog.class" beforeDir="false" afterPath="$PROJECT_DIR$/ClasssWork (21.11.19)/out/production/ClasssWork (21.11.19)/Dog.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClasssWork (21.11.19)/src/Dog.java" beforeDir="false" afterPath="$PROJECT_DIR$/ClasssWork (21.11.19)/src/Dog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClasssWork (21.11.19)/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/ClasssWork (21.11.19)/src/Main.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,6 +32,26 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="homework 7 (20.11.19)" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -50,6 +65,7 @@
       <workItem from="1573926074878" duration="106000" />
       <workItem from="1573928385057" duration="660000" />
       <workItem from="1574367465657" duration="270000" />
+      <workItem from="1574679061879" duration="110000" />
     </task>
     <servers />
   </component>
