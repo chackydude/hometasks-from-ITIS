@@ -25,6 +25,7 @@ public class Pascal2 {
             }
             System.out.println();
         }
+
     }
 
     // method which creates array of the binomial coefficients, with using recursion
@@ -40,7 +41,7 @@ public class Pascal2 {
     }
 
     // method which calculates quantity of the digits in the number
-    public static long calcLenhOfNumber(long number) {
+    public static long calcLenOfNumber(long number) {
         long countDigit = 0;
         while (number > 0) {
             number = number / 10;
@@ -53,8 +54,9 @@ public class Pascal2 {
     public static long calcLenOfLine(int[] array) {
         long len = 0;
         for (int i = 0; i < array.length; i++) {
-            len = len + calcLenhOfNumber(array[i]);
+            len = len + calcLenOfNumber(array[i]);
         }
+        // returns length of the line + spaces between numbers
         return len + array.length;
     }
 }
