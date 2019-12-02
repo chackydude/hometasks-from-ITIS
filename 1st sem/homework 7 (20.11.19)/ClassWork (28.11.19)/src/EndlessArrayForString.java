@@ -42,3 +42,6 @@ Constructor x3 ^_^
 indexOf(int data) (first element)
 indexOf(int data, int from) (overloading)s
  */
+        String[] COMMANDS = new String[] {"add", "get element", "get size", "get capacity",
+        "remove element", "equal arrays", "get hash code", "turn to string",
+        "index of", "index of-from", "exit"};
