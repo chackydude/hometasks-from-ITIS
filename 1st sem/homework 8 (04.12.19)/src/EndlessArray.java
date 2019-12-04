@@ -146,4 +146,25 @@ public class EndlessArray {
             System.out.print(array[i] + " ");
         }
     }
- }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        EndlessArray array1 = (EndlessArray) o;
+        return amountOfElements == array1.amountOfElements &&
+                len == array1.len &&
+                tail == array1.tail &&
+                hash == array1.hash &&
+                Arrays.equals(array, array1.array);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = Objects.hash(amountOfElements, len, tail, hash);
+        result = 31 * result + Arrays.hashCode(array);
+        return result;
+    }
+
+
+}

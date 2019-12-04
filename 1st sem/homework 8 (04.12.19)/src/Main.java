@@ -45,7 +45,7 @@ public class Main {
                     System.out.println("Result: " + array.checkEquals(inputArray));
                     break;
                 case "get hash code":
-                    System.out.println("Hash code: " + array.hash);
+                    System.out.println("Hash code: " + array.hashCode());
                     break;
                 case "turn to string":
                     System.out.println(array.turnToString());
