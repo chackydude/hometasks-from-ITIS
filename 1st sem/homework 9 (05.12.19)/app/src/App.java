@@ -9,11 +9,11 @@ public class App {
     }
 
     // Some app resources
+    public App app;
     public Scanner  inputScanner;
     public String[] tasks;
     public int      tasksCount;
-    public CommandAddTask addTask = new CommandAddTask();
-
+    public CommandAddTask addTask = new CommandAddTask(app);
 
     // Some app properties
     public final String[] COMMAND_NAMES = {
@@ -24,6 +24,7 @@ public class App {
     /**
      * Initialization function.
      */
+
     public void init(){
         inputScanner = new Scanner(System.in);
         tasks = new String[100];
@@ -105,32 +106,10 @@ public class App {
     /*
     Getters / setters
      */
-
-    public Scanner getInputScanner() {
-        return inputScanner;
+    public void getTask(){
+        createTask();
     }
 
-    public String[] getTasks() {
-        return tasks;
-    }
 
-    public int getTasksCount() {
-        return tasksCount;
-    }
 
-    public String[] getCOMMAND_NAMES() {
-        return COMMAND_NAMES;
-    }
-
-    public void setInputScanner(Scanner inputScanner) {
-        this.inputScanner = inputScanner;
-    }
-
-    public void setTasks(String[] tasks) {
-        this.tasks = tasks;
-    }
-
-    public void setTasksCount(int tasksCount) {
-        this.tasksCount = tasksCount;
-    }
 }
