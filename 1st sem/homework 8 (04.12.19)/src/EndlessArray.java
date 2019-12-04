@@ -10,7 +10,7 @@ public class EndlessArray {
 
     //variables
     public int amountOfElements = 0;
-    public int len = 100;
+    public int len = 3;
     public int[] array = new int[len];
     //public Date dateOfCreation = new Date();
     final int tail = 50;
