@@ -59,6 +59,7 @@ public class EndlessArray {
         } else return -0;
     }
 
+    // return number of how much elements array contains
     public int getSize() {
         return amountOfElements;
     }
@@ -77,6 +78,7 @@ public class EndlessArray {
         amountOfElements--;
     }
 
+    // compare two arrays element by element
     public boolean checkEquals(int[] inputArray) {
         if (inputArray.length == amountOfElements) {
             for (int i = 0; i < amountOfElements; i++) {
@@ -88,6 +90,7 @@ public class EndlessArray {
         } else return false;
     }
 
+    // my own hashCode()
     public long getHashcode() {
         int mark = 1;
         if (Math.random() > 0.5) {
@@ -97,6 +100,7 @@ public class EndlessArray {
         return hashCode;
     }
 
+    // my own toString(), default turns array to string, with "," between the elements
     public String turnToString() {
         String result = new String("[");
         for (int i = 0; i < amountOfElements; i++) {
@@ -108,6 +112,7 @@ public class EndlessArray {
         return result;
     }
 
+    // overloaded method, flag - is element, what must to be between the elements
     public String turnToString(String flag) {
         String result = new String("[");
         for (int i = 0; i < amountOfElements; i++) {
@@ -119,6 +124,7 @@ public class EndlessArray {
         return result;
     }
 
+    // returns index of first element which equals num
     public int showIndexOf(int num) {
         int index = -1;
         for (int i = 0; i < amountOfElements; i++) {
@@ -130,6 +136,7 @@ public class EndlessArray {
         return index;
     }
 
+    // overloaded method, where startFrom - index to begin searching
     public int showIndexOf(int num, int startFrom) {
         int index = -1;
         for (int i = startFrom; i < amountOfElements; i++) {
