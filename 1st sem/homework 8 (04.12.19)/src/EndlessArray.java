@@ -3,6 +3,11 @@ import java.util.Date;
 import java.util.Objects;
 import java.util.Scanner;
 
+/**
+ * Class of "everlasting" array
+ * @author trofimoff
+ * @version 1.1
+ */
 public class EndlessArray {
     public static void main(String[] args) {
         EndlessArray ea = new EndlessArray();
@@ -16,28 +21,51 @@ public class EndlessArray {
     final int tail = 50;
     public long hash = getHashcode();
 
+    /**
+     * Constructor, creation of the new object
+     * @see EndlessArray#EndlessArray()
+     */
     public EndlessArray() {
     }
 
+    /**
+     * Constructor, creation of the new object with parameters
+     * @param len
+     * @param array
+     */
     public EndlessArray(int len, int[] array) {
         this.len = len;
         this.array = array;
     }
 
+    /**
+     * Constructor, creation of the new object with parameters
+     * @param amountOfElements
+     * @param len
+     * @param array
+     */
     public EndlessArray(int amountOfElements, int len, int[] array) {
         this.amountOfElements = amountOfElements;
         this.len = len;
         this.array = array;
     }
 
-    // initialization method
+    /**
+     * initialization method
+     */
     public void init() {
     }
 
-    // main running method
+    /**
+     * main running method
+     */
     public void start() {
     };
 
+    /**
+     * Method to add new element in the array
+     * @param num - adding element
+     */
     public void addElement(int num) {
         if (amountOfElements < array.length) {
             array[amountOfElements] = num;
@@ -53,21 +81,37 @@ public class EndlessArray {
         amountOfElements++;
     }
 
+    /**
+     * Method to get element from the array by index
+     * @param index - index of the getting element
+     * @return returns integer element
+     */
     public int getElement(int index) {
         if (index >= 0 && index < amountOfElements){
             return array[index];
         } else return -0;
     }
 
-    // return number of how much elements array contains
+    /**
+     * Method to get amount of elements in the array
+     * @return returns number of how much elements array contains
+     */
     public int getSize() {
         return amountOfElements;
     }
 
+    /**
+     * Method to get capacity of the array, how much elements array can consist
+     * @return capacity of the array
+     */
     public int getCapacity() {
         return array.length;
     }
 
+    /**
+     * Method to remove element from the array by index
+     * @param index - index of removing element
+     */
     public void removeElement(int index) {
         if (index > 0 && index <= amountOfElements){
             for (int i = index; i < amountOfElements; i++) {
@@ -78,7 +122,11 @@ public class EndlessArray {
         amountOfElements--;
     }
 
-    // compare two arrays element by element
+    /**
+     * Method to compare two arrays element by element
+     * @param inputArray - comparing array
+     * @return returns true if two arrays equals, else returns false
+     */
     public boolean checkEquals(int[] inputArray) {
         if (inputArray.length == amountOfElements) {
             for (int i = 0; i < amountOfElements; i++) {
@@ -90,7 +138,10 @@ public class EndlessArray {
         } else return false;
     }
 
-    // my own hashCode()
+    /**
+     * Overrided method to get hashcode
+     * @return returns hashcode of the array
+     */
     public long getHashcode() {
         int mark = 1;
         if (Math.random() > 0.5) {
@@ -100,7 +151,10 @@ public class EndlessArray {
         return hashCode;
     }
 
-    // my own toString(), default turns array to string, with "," between the elements
+    /**
+     * Method default turns array to string, with "," between the elements
+     * @return returns string which consists out array
+     */
     public String turnToString() {
         String result = new String("[");
         for (int i = 0; i < amountOfElements; i++) {
@@ -112,6 +166,11 @@ public class EndlessArray {
         return result;
     }
 
+    /**
+     * Overloaded method, flag - is element, what must to be between the elements
+     * @param flag - symbol between elements
+     * @return returns string which consists our array
+     */
     // overloaded method, flag - is element, what must to be between the elements
     public String turnToString(String flag) {
         String result = new String("[");
@@ -124,7 +183,11 @@ public class EndlessArray {
         return result;
     }
 
-    // returns index of first element which equals num
+    /**
+     * Method to find first desiring element by index
+     * @param num - desiring element
+     * @return returns index of first desiring element which equals num
+     */
     public int showIndexOf(int num) {
         int index = -1;
         for (int i = 0; i < amountOfElements; i++) {
@@ -136,6 +199,12 @@ public class EndlessArray {
         return index;
     }
 
+    /**
+     * Method to find first desiring element by index
+     * @param num - desiring element
+     * @param startFrom - starting index
+     * @return returns index of first desiring element which equals num
+     */
     // overloaded method, where startFrom - index to begin searching
     public int showIndexOf(int num, int startFrom) {
         int index = -1;
@@ -148,6 +217,9 @@ public class EndlessArray {
         return index;
     }
 
+    /**
+     * Method to output all elements from our array
+     */
     public void showArray() {
         for (int i = 0; i < amountOfElements; i++) {
             System.out.print(array[i] + " ");
