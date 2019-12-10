@@ -1,4 +1,4 @@
-public interface Runnable {
+public interface AbleToRun {
     public void run();
     public void fallDown();
 }
