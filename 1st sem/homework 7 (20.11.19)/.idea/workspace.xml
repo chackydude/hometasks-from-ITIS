@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1077917f-7084-4233-abf6-c492293c3345" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../classwork 10 (11.12.19)/project/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../classwork 10 (11.12.19)/project/src/Classwork.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework 10 (11.12.19)/src/Escherichia.java" beforeDir="false" afterPath="$PROJECT_DIR$/../homework 10 (11.12.19)/src/Escherichia.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClasssWork (21.11.19)/src/Dog.java" beforeDir="false" afterPath="$PROJECT_DIR$/ClasssWork (21.11.19)/src/Dog.java" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1UsqE8QBWVtU4c4OAOI2Wa0EYbD" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1077917f-7084-4233-abf6-c492293c3345" name="Default Changelist" comment="" />
+      <created>1576155535309</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1576155535309</updated>
+      <workItem from="1576155536755" duration="22000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

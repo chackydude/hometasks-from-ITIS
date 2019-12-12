@@ -1,10 +1,11 @@
 // package ru.kpfu.ITIS.trofimoff.dog - how to send to the package
+import java.awt.*;
 import java.util.Date;
 import java.util.Objects;
 
 public class Dog {
     public String breed;
-    public String color;
+    public Color color;
     public String eyeColor;
     public String gender;
     public String name;
@@ -30,7 +31,6 @@ public class Dog {
                 '}';
     }
 
-    // how it works!?
     @Override
     public boolean equals(Object o) {
         // check
@@ -60,22 +60,22 @@ public class Dog {
         System.out.println("Haw! Rrrrr-rrr, I'm " + name + '!');
     }
 
-    // first class
-    public Dog(String name, String gender, String eyeColor) {
-        this.eyeColor = eyeColor;
+    // first constructor
+    public Dog(String gender, String name, String eyeColor) {
         this.gender = gender;
+        this.eyeColor = eyeColor;
         this.name = name;
     }
 
     // second constructor
-    public Dog(String name, String gender) {
-        this.name = name;
+    public Dog(String gender, String name) {
         this.gender = gender;
+        this.name = name;
     }
 
     // third constructor
-    public Dog(String name) {
-        this.name = name;
+    public Dog(String gender) {
+        this.gender = gender;
     }
 
     // getters
@@ -87,7 +87,7 @@ public class Dog {
         return breed;
     }
 
-    public String getColor() {
+    public Color getColor() {
         return color;
     }
 
@@ -128,7 +128,7 @@ public class Dog {
         this.breed = breed;
     }
 
-    public void setColor(String color) {
+    public void setColor(Color color) {
         this.color = color;
     }
 

@@ -1,4 +1,4 @@
-public interface AbleToRead extends AbleToStudy {
+public interface Reader extends Studier {
     public void read();
     public void turnUpPage();
     public void turnDownPage();

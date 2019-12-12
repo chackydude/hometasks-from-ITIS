@@ -1,6 +1,6 @@
 import java.awt.*;
 
-public abstract class Bird implements AbleToEat, AbleToSleep{
+public abstract class Bird implements Eater, Sleeper {
     protected int weight;
     protected String sounds;
     protected Color color;

@@ -1,7 +1,5 @@
 import java.util.Arrays;
-import java.util.Date;
 import java.util.Objects;
-import java.util.Scanner;
 
 /**
  * Class of "everlasting" array
@@ -15,10 +13,10 @@ public class EndlessArray {
 
     //variables
     public int amountOfElements = 0;
-    public int len = 3;
-    public int[] array = new int[len];
+    public final int INIT_LEN = 3;
+    public int[] array = new int[INIT_LEN];
     //public Date dateOfCreation = new Date();
-    final int tail = 50;
+    private final int TAIL = 50;
     public long hash = getHashcode();
 
     /**
@@ -34,7 +32,7 @@ public class EndlessArray {
      * @param array
      */
     public EndlessArray(int len, int[] array) {
-        this.len = len;
+//        this.INIT_LEN = len;
         this.array = array;
     }
 
@@ -46,21 +44,9 @@ public class EndlessArray {
      */
     public EndlessArray(int amountOfElements, int len, int[] array) {
         this.amountOfElements = amountOfElements;
-        this.len = len;
+//        this.INIT_LEN = len;
         this.array = array;
     }
-
-    /**
-     * initialization method
-     */
-    public void init() {
-    }
-
-    /**
-     * main running method
-     */
-    public void start() {
-    };
 
     /**
      * Method to add new element in the array
@@ -70,8 +56,8 @@ public class EndlessArray {
         if (amountOfElements < array.length) {
             array[amountOfElements] = num;
         } else {
-            len += tail;
-            int[] newArray = new int[len];
+            INIT_LEN += tail;
+            int[] newArray = new int[INIT_LEN];
             for (int i = 0; i < array.length; i++) {
                 newArray[i] = array[i];
             };
@@ -135,7 +121,9 @@ public class EndlessArray {
                 }
             }
             return true;
-        } else return false;
+        } else {
+            return false;
+        }
     }
 
     /**
@@ -232,15 +220,13 @@ public class EndlessArray {
         if (o == null || getClass() != o.getClass()) return false;
         EndlessArray array1 = (EndlessArray) o;
         return amountOfElements == array1.amountOfElements &&
-                len == array1.len &&
-                tail == array1.tail &&
                 hash == array1.hash &&
                 Arrays.equals(array, array1.array);
     }
 
     @Override
     public int hashCode() {
-        int result = Objects.hash(amountOfElements, len, tail, hash);
+        int result = Objects.hash(amountOfElements, INIT_LEN, tail, hash);
         result = 31 * result + Arrays.hashCode(array);
         return result;
     }

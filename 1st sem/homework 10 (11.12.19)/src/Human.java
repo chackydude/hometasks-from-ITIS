@@ -1,9 +1,9 @@
 import java.awt.*;
 import java.util.Date;
 
-public abstract class Human implements AbleToEat, AbleToSleep{
+public abstract class Human implements Eater, Sleeper {
     protected String name;
-    public String catchphrase;
+    protected String catchphrase;
     protected Date birthDate;
     protected Color eyeColor;
     protected Color hairColor;
