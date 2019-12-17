@@ -3,7 +3,7 @@ import java.util.Objects;
 
 /**
  * Class of "everlasting" array
- * @author trofimoff
+ * @author trofimoff trofimovdanil946@gmail.com
  * @version 1.1
  */
 public class EndlessArray {
