@@ -21,7 +21,11 @@ public class Main {
                     break;
                 case "get element" :
                     System.out.println("Enter index of the element");
-                    System.out.println("Result: " + array.getElement(inputScanner.nextInt()));
+                    try {
+                        System.out.println("Result: " + array.getElement(inputScanner.nextInt()));
+                    } catch (IndexOutOfBoundsException e) {
+                        System.out.println(e.getMessage());
+                    }
                     break;
                 case "get size":
                     System.out.println("Result: " + array.getSize());
@@ -31,8 +35,12 @@ public class Main {
                     break;
                 case "remove element":
                     System.out.println("Enter index of the removing element:");
-                    array.removeElement(inputScanner.nextInt());
-                    System.out.println("Removed.");
+                    try {
+                        array.removeElement(inputScanner.nextInt());
+                        System.out.println("Removed.");
+                    } catch (IndexOutOfBoundsException e) {
+                        System.out.println(e.getMessage());
+                    }
                     break;
                 case "equal arrays":
                     System.out.println("Enter array's length:");
@@ -65,7 +73,11 @@ public class Main {
                     int element1 = inputScanner.nextInt();
                     System.out.println("Enter starting position: ");
                     int pos = inputScanner.nextInt();
-                    System.out.println("Result: " + array.showIndexOf(element1, pos));
+                    try {
+                        System.out.println("Result: " + array.showIndexOf(element1, pos));
+                    } catch (IndexOutOfBoundsException e) {
+                        System.out.println(e.getMessage());
+                    }
                     break;
                 case "show array":
                     array.showArray();

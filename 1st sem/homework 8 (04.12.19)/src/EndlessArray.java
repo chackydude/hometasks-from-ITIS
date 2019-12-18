@@ -13,8 +13,8 @@ public class EndlessArray {
 
     //variables
     public int amountOfElements = 0;
-    public final int INIT_LEN = 3;
-    public int[] array = new int[INIT_LEN];
+    public int len = 3;
+    public int[] array = new int[len];
     //public Date dateOfCreation = new Date();
     private final int TAIL = 50;
     public long hash = getHashcode();
@@ -56,8 +56,8 @@ public class EndlessArray {
         if (amountOfElements < array.length) {
             array[amountOfElements] = num;
         } else {
-            INIT_LEN += tail;
-            int[] newArray = new int[INIT_LEN];
+            len += TAIL;
+            int[] newArray = new int[len];
             for (int i = 0; i < array.length; i++) {
                 newArray[i] = array[i];
             };
@@ -72,10 +72,12 @@ public class EndlessArray {
      * @param index - index of the getting element
      * @return returns integer element
      */
-    public int getElement(int index) {
+    public int getElement(int index) throws IndexOutOfBoundsException{
         if (index >= 0 && index < amountOfElements){
             return array[index];
-        } else return -0;
+        } else {
+            throw new IndexOutOfBoundsException("Введен индекс, которому не соответствует ни один элемент!");
+        }
     }
 
     /**
@@ -98,12 +100,14 @@ public class EndlessArray {
      * Method to remove element from the array by index
      * @param index - index of removing element
      */
-    public void removeElement(int index) {
+    public void removeElement(int index) throws IndexOutOfBoundsException{
         if (index > 0 && index <= amountOfElements){
             for (int i = index; i < amountOfElements; i++) {
                 array[i] = array[i + 1];
             }
             array[amountOfElements] = 0;
+        } else {
+            throw new IndexOutOfBoundsException("Введен индекс, которому не соответствует ни один элемент!");
         }
         amountOfElements--;
     }
@@ -196,6 +200,9 @@ public class EndlessArray {
     // overloaded method, where startFrom - index to begin searching
     public int showIndexOf(int num, int startFrom) {
         int index = -1;
+        if (startFrom >= amountOfElements || startFrom < 0) {
+            throw new IndexOutOfBoundsException("Введен индекс, которому не соответствует ни один элемент!");
+        }
         for (int i = startFrom; i < amountOfElements; i++) {
             if (array[i] == num) {
                 index = i;
@@ -226,10 +233,8 @@ public class EndlessArray {
 
     @Override
     public int hashCode() {
-        int result = Objects.hash(amountOfElements, INIT_LEN, tail, hash);
+        int result = Objects.hash(amountOfElements, len, TAIL, hash);
         result = 31 * result + Arrays.hashCode(array);
         return result;
     }
-
-
 }
