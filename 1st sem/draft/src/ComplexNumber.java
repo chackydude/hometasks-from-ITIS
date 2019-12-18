@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class ComplexNumber {
 
     private double real;
@@ -13,6 +15,10 @@ public class ComplexNumber {
     // static можно обращаться без создания экземпляра класса
     public static ComplexNumber calculateSum(ComplexNumber cn1, ComplexNumber cn2) {
         return new ComplexNumber(cn1.getReal() + cn2.getReal(), cn1.getImaginary() + cn2.getImaginary());
+    }
+
+    public ComplexNumber calculateSum2(ComplexNumber cn) {
+        return new ComplexNumber(real + cn.real, imaginary + cn.imaginary);
     }
 
     public static ComplexNumber calculateMult(ComplexNumber cn1,ComplexNumber cn2) {
@@ -37,6 +43,22 @@ public class ComplexNumber {
         return "" + real + flag + imaginary + "*"   + "i";
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ComplexNumber that = (ComplexNumber) o;
+        return Double.compare(that.real, real) == 0 &&
+                Double.compare(that.imaginary, imaginary) == 0 &&
+                Double.compare(that.module, module) == 0 &&
+                Double.compare(that.angle, angle) == 0;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(real, imaginary, module, angle);
+    }
+
     public double getModule() {
         return module;
     }
@@ -47,5 +69,9 @@ public class ComplexNumber {
 
     public double getImaginary() {
         return imaginary;
+    }
+
+    public ComplexNumber getPare(ComplexNumber cn) {
+        return new ComplexNumber(cn.getReal(), 0 - cn.getImaginary());
     }
 }
