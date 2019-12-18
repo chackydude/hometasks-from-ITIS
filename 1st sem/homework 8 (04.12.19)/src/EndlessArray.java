@@ -75,9 +75,9 @@ public class EndlessArray {
     public int getElement(int index) throws IndexOutOfBoundsException{
         if (index >= 0 && index < amountOfElements){
             return array[index];
-        } else {
+        } else if (index < 0 || index > len){
             throw new IndexOutOfBoundsException("Введен индекс, которому не соответствует ни один элемент!");
-        }
+        } else return array[index];
     }
 
     /**
@@ -106,8 +106,10 @@ public class EndlessArray {
                 array[i] = array[i + 1];
             }
             array[amountOfElements] = 0;
-        } else {
+        } else if (index < 0 || index > len){
             throw new IndexOutOfBoundsException("Введен индекс, которому не соответствует ни один элемент!");
+        } else {
+            System.out.println("Элемента с таким индексом не объявлен.");
         }
         amountOfElements--;
     }
