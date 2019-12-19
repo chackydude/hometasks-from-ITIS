@@ -1,4 +1,3 @@
-// проверяемое исключение
 public class NegativeDividerException extends Exception {
     public NegativeDividerException() {
     }

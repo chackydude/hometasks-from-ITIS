@@ -32,7 +32,7 @@ public class EndlessArray {
      * @param array
      */
     public EndlessArray(int len, int[] array) {
-//        this.INIT_LEN = len;
+        this.len = len;
         this.array = array;
     }
 
@@ -44,7 +44,7 @@ public class EndlessArray {
      */
     public EndlessArray(int amountOfElements, int len, int[] array) {
         this.amountOfElements = amountOfElements;
-//        this.INIT_LEN = len;
+        this.len = len;
         this.array = array;
     }
 
@@ -73,11 +73,11 @@ public class EndlessArray {
      * @return returns integer element
      */
     public int getElement(int index) throws IndexOutOfBoundsException{
-        if (index >= 0 && index < amountOfElements){
+        if (index >= 0 && index < amountOfElements){ // len -> amountOfElements
             return array[index];
-        } else if (index < 0 || index > len){
+        } else {
             throw new IndexOutOfBoundsException("Введен индекс, которому не соответствует ни один элемент!");
-        } else return array[index];
+        }
     }
 
     /**
@@ -101,19 +101,16 @@ public class EndlessArray {
      * @param index - index of removing element
      */
     public void removeElement(int index) throws IndexOutOfBoundsException{
-        if (index > 0 && index <= amountOfElements){
+        if (index >= 0 && index < amountOfElements){
             for (int i = index; i < amountOfElements; i++) {
                 array[i] = array[i + 1];
             }
             array[amountOfElements] = 0;
-        } else if (index < 0 || index > len){
-            throw new IndexOutOfBoundsException("Введен индекс, которому не соответствует ни один элемент!");
         } else {
-            System.out.println("Элемента с таким индексом не объявлен.");
+            throw new IndexOutOfBoundsException("Введен индекс, которому не соответствует ни один элемент!");
         }
         amountOfElements--;
     }
-
     /**
      * Method to compare two arrays element by element
      * @param inputArray - comparing array
