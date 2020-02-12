@@ -4,7 +4,7 @@ public class Three implements Comparable<Three>{
 
     @Override
     public int compareTo(Three o) {
-        if (this.breed == o.breed &&
+        if (this.breed.equals(o.breed) &&
             this.height == o.height) {
             return 0;
         } else if (this.height > this.height){
