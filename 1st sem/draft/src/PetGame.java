@@ -22,5 +22,6 @@ public class PetGame {
                 System.out.println("score: " + counter);
             }
         };
+        System.out.println("run time (millis): " + (System.currentTimeMillis()));
     }
 }
