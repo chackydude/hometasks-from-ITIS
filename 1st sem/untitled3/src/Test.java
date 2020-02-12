@@ -5,3 +5,7 @@ public class Test {
         System.out.println(obj0.getType1());
     }
 }
+
+// hw: 1) TODO сделать EndlessArray - дженериком с типом <T> (хоба (T[]) new Object[]; (T) data[i])
+//     2) TODO дописать Pare?
+//     3) TODO написать 3 класса, реализующих comparable (насчет comparable почитать Java API)
