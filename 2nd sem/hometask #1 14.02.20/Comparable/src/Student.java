@@ -4,6 +4,13 @@ public class Student implements Comparable<Student>{
     private Color eyeColor;
     private int height;
 
+    // constructor
+    public Student(Color eyeColor,int height) {
+        this.eyeColor = eyeColor;
+        this.height = height;
+    }
+
+    // compare
     @Override
     public int compareTo(Student o) {
         int answer = 0;

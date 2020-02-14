@@ -15,7 +15,7 @@ public class EndlessArray <T> {
     //variables
     public int amountOfElements = 0;
     public int len = 3;
-    public T[] array = (T[]) new Object[len];
+    public T[] array = (T[]) new Objects[len];
     //public Date dateOfCreation = new Date();
     private final int TAIL = 50;
     public long hash = getHashcode();
