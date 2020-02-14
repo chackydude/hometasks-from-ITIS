@@ -14,7 +14,7 @@ public class Three implements Comparable<Three>{
         if (this.breed.equals(o.breed) &&
             this.height == o.height) {
             return 0;
-        } else if (this.height > this.height){
+        } else if (this.height >= this.height){
             return 1;
         } else return -1;
     }

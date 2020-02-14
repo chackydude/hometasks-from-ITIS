@@ -16,7 +16,7 @@ public class Cat implements Comparable<Cat> {
         if (this.tailLength == o.tailLength &&
             this.woolColor == o.woolColor) {
             return 0;
-        } else if (this.tailLength > o.tailLength){
+        } else if (this.tailLength >= o.tailLength){
             return 1;
         } else return -1;
     }

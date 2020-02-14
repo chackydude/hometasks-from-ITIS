@@ -13,11 +13,10 @@ public class Student implements Comparable<Student>{
     // compare
     @Override
     public int compareTo(Student o) {
-        int answer = 0;
         if (this.eyeColor == o.eyeColor &&
                 this.height == o.height) {
-            return answer;
-        } else if (this.height > o.height) {
+            return 0;
+        } else if (this.height >= o.height) {
             return 1;
         } else return -1;
     }

@@ -1,4 +1,7 @@
+import java.util.Arrays;
+
 public class Stack<T> {
+    // FILO
     public int amountOfElements = 0;
     public int length;
     public T array[];
@@ -7,6 +10,7 @@ public class Stack<T> {
     //constructor
     public Stack(int length) {
         this.array = (T[]) new Object[length];
+        this.length = length;
     }
 
     // adds element into the end of the Stack
@@ -19,13 +23,13 @@ public class Stack<T> {
     // returns and deletes element from the end of the Stack
     public T pop() {
         T buffer = this.lastElement;
-        this.array[amountOfElements] = null;
-        amountOfElements--;
-        this.lastElement = array[amountOfElements-1];
+        this.lastElement = array[amountOfElements - 2];
+        this.array[amountOfElements - 1] = null;
+        this.amountOfElements--;
         return buffer;
     }
 
-    // how mush elements Stack includes
+    // how much elements Stack includes
     public int size() {
         return this.amountOfElements;
     }
@@ -33,5 +37,11 @@ public class Stack<T> {
     // returns last element of the Stack without deleting
     public T peek() {
         return this.lastElement;
+    }
+
+    // returns array of the Stack at that moment
+    @Override
+    public String toString() {
+        return Arrays.toString(array);
     }
 }
