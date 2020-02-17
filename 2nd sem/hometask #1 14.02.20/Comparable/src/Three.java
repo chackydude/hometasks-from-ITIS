@@ -1,18 +1,18 @@
 public class Three implements Comparable<Three>{
     private int height;
-    private String breed;
+    private int width;
 
     //constructor
-    public Three(int height, String breed) {
+    public Three(int height, int width) {
         this.height = height;
-        this.breed = breed;
+        this.width = width;
     }
 
     // compare
     @Override
     public int compareTo(Three o) {
-        if (this.breed.equals(o.breed) &&
-            this.height == o.height) {
+        if ((this.width == o.width) &&
+        (this.height == o.height)) {
             return 0;
         } else if (this.height >= this.height){
             return 1;

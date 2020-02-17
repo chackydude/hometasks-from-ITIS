@@ -1,12 +1,10 @@
 import java.awt.*;
 
 public class Student implements Comparable<Student>{
-    private Color eyeColor;
     private int height;
 
     // constructor
-    public Student(Color eyeColor,int height) {
-        this.eyeColor = eyeColor;
+    public Student(int height) {
         this.height = height;
     }
 
