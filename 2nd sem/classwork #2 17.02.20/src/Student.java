@@ -1,6 +1,6 @@
 public class Student {
     private int height;
-    // iq has much more priority
+    // height takes precedence
     private int iq;
 
     public Student(int height, int iq) {
