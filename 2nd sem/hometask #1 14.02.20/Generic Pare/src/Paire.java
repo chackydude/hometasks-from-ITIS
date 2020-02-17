@@ -1,9 +1,9 @@
 // Generic class 12.02.20
-public class Pare <T0, T1> {
+public class Paire <T0, T1> {
     private final T0 obj0;
     private final T1 obj1;
     // constructor
-    public Pare(T0 obj0, T1 obj1) {
+    public Paire(T0 obj0, T1 obj1) {
         this.obj0 = obj0;
         this.obj1 = obj1;
     }
