@@ -17,6 +17,6 @@ public class HeightStudentComparator implements Comparator <Student>{
 
 // HW : TODO 1) Написать 2 компаратора
 //      TODO 2) Реализовать сортировку пузырьком используя компараторы
-//      TODO 3) Написать интерфейс public interface Number<T>
+//      TODO 3) Написать интерфейс public interface Wildcard.Number<T>
 //                                  public T sum(T obj);
 //      TODO 4) Глянуть API Comparable, Wildcards etc
