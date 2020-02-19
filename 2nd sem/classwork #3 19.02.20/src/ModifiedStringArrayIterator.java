@@ -9,7 +9,15 @@ public class ModifiedStringArrayIterator implements java.util.Iterator<String> {
 
     // check next el
     public boolean hasNext() {
-        return data.length > cursor;
+        if (cursor < data.length) {
+            int cursorCheck = cursor;
+            while (data[cursorCheck] == null && cursorCheck < data.length-2) {
+                cursorCheck+=2;
+            }
+            if (data[cursorCheck] == null) {
+                return false;
+            } else return true;
+        } else return false;
     };
 
     // returns next element
@@ -17,8 +25,7 @@ public class ModifiedStringArrayIterator implements java.util.Iterator<String> {
         try {
             String el = data[cursor];
             while (el == null) {
-                cursor += 2;
-                el = data[cursor];
+                el = data[cursor+=2];
             }
             cursor += 2;
             return el;
@@ -33,7 +40,7 @@ public class ModifiedStringArrayIterator implements java.util.Iterator<String> {
 // "a" "b" "null" "d" "null" "e" "f"
 /* HW: (на след неделю)
     1) APIшки
-    2) Доделать классную работу
+    2) Доделать классную работу (логика c null)
     3) Переписать EndlessArray с итератором
     4) Итереатор первый-песледний-второй-предпоследний
     5) Итератор, который постоянно возвращает случайный элемент

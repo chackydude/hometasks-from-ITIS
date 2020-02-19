@@ -7,7 +7,7 @@ public class StringArrayIterator implements java.util.Iterator<String>{
         this.data = data;
     }
 
-    // check next element
+    // check next el
     public boolean hasNext() {
         return data.length > cursor;
     };
