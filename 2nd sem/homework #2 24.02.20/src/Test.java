@@ -7,10 +7,9 @@ public class Test {
         Integer[] arrayTest = new Integer[] {0,1,2,3,4};
 
         EndlessArray<Integer> arrayEn = new EndlessArray<Integer>(5, arrayTest);
-
         // create object of EndlessArray iterator
         EndlessArrayIterator<EndlessArray> iterator = new EndlessArrayIterator<EndlessArray>(arrayEn);
-        // EndlessArray != EndlessArray<Integer>???
+        // EndlessArray != EndlessArray<Integer>??? TODO fix type error
 
         // RandomIterator test
         RandomIterator iterator1 = new RandomIterator(arrayTest);
