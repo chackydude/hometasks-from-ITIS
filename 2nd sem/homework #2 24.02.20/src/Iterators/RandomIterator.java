@@ -15,7 +15,7 @@ public class RandomIterator {
     };
 
     // returns next element
-    public Integer next() {
+    public int next() {
         return (int) Math.floor(100 * Math.random());
     }
 }

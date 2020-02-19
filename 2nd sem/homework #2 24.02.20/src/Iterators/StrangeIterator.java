@@ -1,24 +1,34 @@
 package Iterators;
 
 public class StrangeIterator {
-    protected String[] data;
-    protected int cursor = 0;
+    protected Integer[] data;
+    public int cursor1 = 0;
+    public int cursor2;
+    protected int flag = 0;
 
     // constructor
-    public StrangeIterator(String[] data) {
+    public StrangeIterator(Integer[] data) {
         this.data = data;
+        this.cursor2 = data.length - 1 - cursor1;
     }
 
     // check next el
     public boolean hasNext() {
-        return data.length > cursor;
+        return (cursor1 - cursor2 != 1);
     };
 
     // returns next element
-    public String next() {
+    public int next() {
         try {
-            String el = data[cursor];
-            cursor++;
+            int el;
+            if (flag % 2 == 0) {
+                el = data[cursor1];
+                cursor1++;
+            } else {
+                el = data[cursor2];
+                cursor2 = data.length - 1 - cursor1;
+            }
+            flag++;
             return el;
         }
         catch (ArrayIndexOutOfBoundsException ex) {
