@@ -1,6 +1,6 @@
 public class StringArrayIterator implements java.util.Iterator<String>{
     protected String[] data;
-    protected int cursor;
+    protected int cursor = 0;
 
     // constructor
     public StringArrayIterator(String[] data) {
