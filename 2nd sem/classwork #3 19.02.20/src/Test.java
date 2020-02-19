@@ -15,10 +15,22 @@ public class Test {
             array[6] = "6";
         }
 
-        ModifiedStringArrayIterator iterator1 = new ModifiedStringArrayIterator(array);
+        String[] array1 = new String[]{};
+        String[] array2 = new String[] {null, null, null, null, null};
+
+        ModifiedStringArrayIterator iterator = new ModifiedStringArrayIterator(array);
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
+        }
+        System.out.println("------------");
+        ModifiedStringArrayIterator iterator1 = new ModifiedStringArrayIterator(array1);
         while (iterator1.hasNext()) {
             System.out.println(iterator1.next());
-            System.out.println("cursor: " + iterator1.cursor);
+        }
+        System.out.println("\n------------");
+        ModifiedStringArrayIterator iterator2 = new ModifiedStringArrayIterator(array);
+        while (iterator1.hasNext()) {
+            System.out.println(iterator2.next());
         }
     }
 }
