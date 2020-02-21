@@ -1,11 +1,10 @@
-import java.util.Arrays;
-
-public class SetInt {
+public class MultiSetInt {
     protected int[] data;
     protected int amountOfElements;
+    protected int[] counter;
 
     // constructor
-    public SetInt(int[] data, int amountOfElements) {
+    public MultiSetInt(int[] data, int amountOfElements) {
         this.data = data;
         this.amountOfElements = amountOfElements;
     }
@@ -15,7 +14,7 @@ public class SetInt {
         boolean flag = true;
         for (int i = 0; i < this.data.length; i++) {
             if (element == this.data[i]) {
-               flag = false;
+                flag = false;
             }
         }
         if (flag) {
@@ -53,10 +52,10 @@ public class SetInt {
     }
 
     // merges two sets
-    public SetInt merge(SetInt set) {
+    public MultiSetInt merge(MultiSetInt set) {
         int[] resultData = new int[this.amountOfElements + set.amountOfElements];
         int resultAmount = 0;
-        SetInt result = new SetInt(resultData, resultAmount);
+        MultiSetInt result = new MultiSetInt(resultData, resultAmount);
 
         for (int i = 0; i < this.amountOfElements; i++) {
             if (!result.has(this.data[i])) {
@@ -82,28 +81,3 @@ public class SetInt {
         return result;
     }
 }
-
-/*
-   TODO: AaDS H/W:
-
- Set (множество)
- - void add (E)
- - boolean has(E)
- - int size()
- - void delete (E)
- -* Set merge(Set)
-  [1,2,3] + [3,4,5] -> [1,2,3,4,5]
-
- *--------------------*
-
-Multiset - по аналогии с Set хранит уникальные элементы в data, но в n
-    protected data
-    protected counters
-    - int countOf(obj);
-
- *--------------------*
-Sorting
-    написатб эффективный алгоритм сортировки пузырьком,
-    основываясь на том, что массив частично сортирован
- */
-
