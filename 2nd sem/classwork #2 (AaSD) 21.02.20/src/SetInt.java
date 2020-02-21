@@ -13,14 +13,14 @@ public class SetInt {
     // adds element into the set
     public void add(int element) {
         boolean flag = true;
-        for (int i = 0; i < data.length; i++) {
-            if (element == data[i]) {
+        for (int i = 0; i < this.data.length; i++) {
+            if (element == this.data[i]) {
                flag = false;
             }
         }
         if (flag) {
-            amountOfElements++;
-            data[amountOfElements] = element;
+            this.amountOfElements++;
+            this.data[amountOfElements - 1] = element;
         }
     }
 
@@ -73,9 +73,13 @@ public class SetInt {
         return result;
     }
 
-    @Override
-    public String toString() {
-        return Arrays.toString(this.data);
+    public StringBuilder setToString() {
+        StringBuilder result = new StringBuilder("[");
+        for (int i = 0; i < this.amountOfElements - 1; i++) {
+            result.append(this.data[i] + ", ");
+        }
+        result.append(data[amountOfElements - 1] + "]");
+        return result;
     }
 }
 
