@@ -1,10 +1,16 @@
 public class Test {
     public static void main(String[] args) {
         int[] array = new int[7];
-        SetInt set = new SetInt(array, 0);
-        for (int i = 1; i < 5; i++) {
-            set.add(i);
+        int[] array1 = new int[7];
+        for (int i = 0; i < 6; i++) {
+            array[i] = i;
         }
+        for (int i = 0; i < 6; i++) {
+            array1[i] = 6;
+        }
+        SetInt set = new SetInt(array,6);
+        SetInt set1 = new SetInt(array1, 6);
+        set1.add(6);
         // tests
         System.out.println("Set toString(): " + set.setToString());
         set.add(5);
@@ -14,6 +20,7 @@ public class Test {
         System.out.println("Set has(3): " + set.has(3));
         System.out.println("Set has(6): " + set.has(6));
         System.out.println("Set size(): " + set.size());
-        System.out.println();
+        System.out.println("Set: " + set.setToString() + "; Set1: " + set1.setToString());
+        System.out.println("Set + Set1 (merge())= " + set.merge(set1).setToString());
     }
 }
