@@ -7,7 +7,10 @@ public class MultiSetInt {
     public MultiSetInt(int[] data, int amountOfElements) {
         this.data = data;
         this.amountOfElements = amountOfElements;
-        this.counters = new int[20];
+        this.counters = new int[100];
+//        for (int i = 0; i < this.data.length; i++) {
+//            if (!counters.has())
+//        }
     }
 
     // adds element into the set
