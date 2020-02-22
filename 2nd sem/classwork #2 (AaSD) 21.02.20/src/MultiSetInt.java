@@ -1,12 +1,13 @@
 public class MultiSetInt {
     protected int[] data;
     protected int amountOfElements;
-    protected int[] counter;
+    protected int[] counters;
 
     // constructor
     public MultiSetInt(int[] data, int amountOfElements) {
         this.data = data;
         this.amountOfElements = amountOfElements;
+        this.counters = new int[20];
     }
 
     // adds element into the set
@@ -20,6 +21,7 @@ public class MultiSetInt {
         if (flag) {
             this.amountOfElements++;
             this.data[amountOfElements - 1] = element;
+            this.counters[element]++;
         }
     }
 
