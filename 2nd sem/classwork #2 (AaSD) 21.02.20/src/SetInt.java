@@ -5,9 +5,12 @@ public class SetInt {
     protected int amountOfElements;
 
     // constructor
-    public SetInt(int[] data, int amountOfElements) {
-        this.data = data;
+    public SetInt(int[] array, int amountOfElements) {
+        this.data = array;
         this.amountOfElements = amountOfElements;
+    }
+
+    public SetInt() {
     }
 
     // adds element into the set
@@ -107,3 +110,12 @@ Sorting
     основываясь на том, что массив частично сортирован
  */
 
+
+// Идеи которые по итогу нужно реализовать утром:
+/*
+    1) сделать так, чтобы при передаче массива с неуникальными элементами в конструктор, в this.data записывался
+    массив только с уникальными элементами (без дупликатов)
+    2) всему, что в data не заполнено присвоить значение NaN
+    3) counters - организовать как словарь (элемент : колитчество встреч)
+    4) пересмотреть и понять весь свой легаси (вчерашний) код
+ */

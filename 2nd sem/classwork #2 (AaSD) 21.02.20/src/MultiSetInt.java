@@ -1,16 +1,16 @@
-public class MultiSetInt {
+import java.util.Arrays;
+import java.util.HashMap;
+
+public class MultiSetInt extends SetInt{
     protected int[] data;
     protected int amountOfElements;
-    protected int[] counters;
+    // dictionary, which contains pairs value : amount of this value in the data
+    protected HashMap<Integer, Integer> counters;
 
     // constructor
-    public MultiSetInt(int[] data, int amountOfElements) {
-        this.data = data;
+    public MultiSetInt(int[] array, int amountOfElements) {
         this.amountOfElements = amountOfElements;
-        this.counters = new int[100];
-//        for (int i = 0; i < this.data.length; i++) {
-//            if (!counters.has())
-//        }
+
     }
 
     // adds element into the set
@@ -24,15 +24,14 @@ public class MultiSetInt {
         if (flag) {
             this.amountOfElements++;
             this.data[amountOfElements - 1] = element;
-            this.counters[element]++;
         }
     }
 
     // checks element in the set
     public boolean has(int element) {
         boolean flag = false;
-        for (int i = 0; i < amountOfElements; i++) {
-            if (element == data[i]) {
+        for (int i = 0; i < this.amountOfElements; i++) {
+            if (element == this.data[i]) {
                 flag = true;
             }
         }
@@ -83,6 +82,26 @@ public class MultiSetInt {
             result.append(this.data[i] + ", ");
         }
         result.append(data[amountOfElements - 1] + "]");
+        return result;
+    }
+
+    // deletes duplicates in the array
+    public static int[] modifyArray(int [] array) {
+        int[] result = new int[array.length];
+        int unicAmount = 0;
+        for (int i = 0; i < array.length; i++) {
+            boolean flag = true;
+            int element = array[i];
+            for (int j = 0; j < result.length; j++) {
+                if (element == result[j]) {
+                    flag = false;
+                }
+            }
+            if (flag) {
+                result[unicAmount] = element;
+                unicAmount++;
+            }
+        }
         return result;
     }
 }
