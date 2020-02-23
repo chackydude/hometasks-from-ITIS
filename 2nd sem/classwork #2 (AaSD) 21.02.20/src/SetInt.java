@@ -21,6 +21,7 @@ public class SetInt {
         for (int i = 0; i < this.amountOfElements; i++) {
             if (element == this.data[i]) {
                flag = false;
+               break;
             }
         }
         if (flag) {
@@ -35,6 +36,7 @@ public class SetInt {
         for (int i = 0; i < this.amountOfElements; i++) {
             if (element == this.data[i]) {
                 flag = true;
+                break;
             }
         }
         return flag;
@@ -98,6 +100,7 @@ public class SetInt {
             for (int j = 0; j < result.length; j++) {
                 if (element == result[j]) {
                     flag = false;
+                    break;
                 }
             }
             if (flag) {
