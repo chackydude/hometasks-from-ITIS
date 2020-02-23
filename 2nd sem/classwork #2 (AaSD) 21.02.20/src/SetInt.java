@@ -4,34 +4,36 @@ public class SetInt {
     protected int[] data;
     protected int amountOfElements;
 
-    // constructor
-    public SetInt(int[] array, int amountOfElements) {
-        this.data = array;
-        this.amountOfElements = amountOfElements;
+    // constructors
+    public SetInt() {
     }
 
-    public SetInt() {
+    public SetInt(int[] array) {
+        // when we create new SetInt, we delete from "array" all duplicates and
+        // and store amount of unique elements in the "amountOfElements"
+        this.data = SetInt.modifyArray(array);
+        this.amountOfElements = SetInt.uniqueCount(array);
     }
 
     // adds element into the set
     public void add(int element) {
         boolean flag = true;
-        for (int i = 0; i < this.data.length; i++) {
+        for (int i = 0; i < this.amountOfElements; i++) {
             if (element == this.data[i]) {
                flag = false;
             }
         }
         if (flag) {
             this.amountOfElements++;
-            this.data[amountOfElements - 1] = element;
+            this.data[this.amountOfElements - 1] = element;
         }
     }
 
     // checks element in the set
     public boolean has(int element) {
         boolean flag = false;
-        for (int i = 0; i < amountOfElements; i++) {
-            if (element == data[i]) {
+        for (int i = 0; i < this.amountOfElements; i++) {
+            if (element == this.data[i]) {
                 flag = true;
             }
         }
@@ -59,7 +61,7 @@ public class SetInt {
     public SetInt merge(SetInt set) {
         int[] resultData = new int[this.amountOfElements + set.amountOfElements];
         int resultAmount = 0;
-        SetInt result = new SetInt(resultData, resultAmount);
+        SetInt result = new SetInt(resultData);
 
         for (int i = 0; i < this.amountOfElements; i++) {
             if (!result.has(this.data[i])) {
@@ -76,13 +78,52 @@ public class SetInt {
         return result;
     }
 
+    // set --> string
     public StringBuilder setToString() {
         StringBuilder result = new StringBuilder("[");
         for (int i = 0; i < this.amountOfElements - 1; i++) {
             result.append(this.data[i] + ", ");
         }
-        result.append(data[amountOfElements - 1] + "]");
+        result.append(this.data[this.amountOfElements - 1] + "]");
         return result;
+    }
+
+    // deletes duplicates in the array
+    public static int[] modifyArray(int [] array) {
+        int[] result = new int[array.length];
+        int uniqAmount = 0;
+        for (int i = 0; i < array.length; i++) {
+            boolean flag = true;
+            int element = array[i];
+            for (int j = 0; j < result.length; j++) {
+                if (element == result[j]) {
+                    flag = false;
+                }
+            }
+            if (flag) {
+                result[uniqAmount] = element;
+                uniqAmount++;
+            }
+        }
+        return result;
+    }
+
+    // calculates amount of unique elements in the array
+    public static int uniqueCount(int[] array) {
+        int result = 0;
+        int countUnique = 0;
+        int count = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == 0) continue;
+            countUnique++;
+            for (int j = i + 1; j < array.length; j++) {
+                if (array[j] == array[i]) {
+                    count++;
+                    break;
+                }
+            }
+        }
+        return result = countUnique - count;
     }
 }
 

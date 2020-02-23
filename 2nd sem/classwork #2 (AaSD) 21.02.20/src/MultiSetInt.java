@@ -7,59 +7,54 @@ public class MultiSetInt extends SetInt{
     // dictionary, which contains pairs value : amount of this value in the data
     protected HashMap<Integer, Integer> counters;
 
-    // constructor
-    public MultiSetInt(int[] array, int amountOfElements) {
-        this.amountOfElements = amountOfElements;
-
+    // constructors
+    public MultiSetInt() {
+        this.amountOfElements = 0;
+        this.data = new int[this.amountOfElements + 100];
+        this.counters = new HashMap<>();
     }
 
-    // adds element into the set
+    public MultiSetInt(int[] array) {
+        this.data = MultiSetInt.modifyArray(array);
+        this.amountOfElements = MultiSetInt.uniqueCount(array);
+        this.counters = new HashMap<>();
+    }
+
+    // adds element into the multi-set
     public void add(int element) {
         boolean flag = true;
-        for (int i = 0; i < this.data.length; i++) {
+        for (int i = 0; i < this.amountOfElements; i++) {
             if (element == this.data[i]) {
                 flag = false;
+                if (this.counters.containsKey(element)) {
+                    this.counters.put(element, this.counters.get(element) + 1);
+                } else this.counters.put(element, 1);
             }
         }
         if (flag) {
             this.amountOfElements++;
-            this.data[amountOfElements - 1] = element;
+            this.data[this.amountOfElements - 1] = element;
+            this.counters.put(element, 1);
         }
     }
 
-    // checks element in the set
-    public boolean has(int element) {
-        boolean flag = false;
-        for (int i = 0; i < this.amountOfElements; i++) {
-            if (element == this.data[i]) {
-                flag = true;
-            }
-        }
-        return flag;
-    }
-
-    // returns amount of elements in the set
-    public int size() {
-        return this.amountOfElements;
-    }
-
-    // deleting element from the set
-    public void delete(int element) {
-        for (int i = 0; i < this.amountOfElements; i++) {
-            if (element == this.data[i]) {
-                for (int j = i; j < this.amountOfElements - 1; j++) {
-                    this.data[j] = this.data[j+1];
+    // deleting element from the multi-set
+        public void delete(int element) {
+            for (int i = 0; i < this.amountOfElements; i++) {
+                if (element == this.data[i]) {
+                    for (int j = i; j < this.amountOfElements - 1; j++) {
+                        this.data[j] = this.data[j+1];
+                    }
+                    this.amountOfElements--;
+                    this.counters.remove(element);
                 }
-                this.amountOfElements--;
             }
-        }
     }
 
-    // merges two sets
+    // merges two multi-sets
     public MultiSetInt merge(MultiSetInt set) {
         int[] resultData = new int[this.amountOfElements + set.amountOfElements];
-        int resultAmount = 0;
-        MultiSetInt result = new MultiSetInt(resultData, resultAmount);
+        MultiSetInt result = new MultiSetInt(resultData);
 
         for (int i = 0; i < this.amountOfElements; i++) {
             if (!result.has(this.data[i])) {
@@ -76,32 +71,13 @@ public class MultiSetInt extends SetInt{
         return result;
     }
 
+    // multi-set --> string
     public StringBuilder setToString() {
         StringBuilder result = new StringBuilder("[");
         for (int i = 0; i < this.amountOfElements - 1; i++) {
             result.append(this.data[i] + ", ");
         }
-        result.append(data[amountOfElements - 1] + "]");
-        return result;
-    }
-
-    // deletes duplicates in the array
-    public static int[] modifyArray(int [] array) {
-        int[] result = new int[array.length];
-        int unicAmount = 0;
-        for (int i = 0; i < array.length; i++) {
-            boolean flag = true;
-            int element = array[i];
-            for (int j = 0; j < result.length; j++) {
-                if (element == result[j]) {
-                    flag = false;
-                }
-            }
-            if (flag) {
-                result[unicAmount] = element;
-                unicAmount++;
-            }
-        }
+        result.append(this.data[this.amountOfElements - 1] + "]");
         return result;
     }
 }
