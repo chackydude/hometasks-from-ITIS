@@ -8,7 +8,7 @@ public class Test {
         list.add(1);
         list.add(2);
         list.add(3);
-        MyCollection <Integer> collection = new MyCollection<>(list);
+        Collection<Integer> collection = new MyCollection<>(list);
         for (Object element : collection) {
             System.out.println(element);
         }
