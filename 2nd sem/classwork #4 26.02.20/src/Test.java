@@ -13,10 +13,13 @@ public class Test {
 
         VariableCollection<Integer> varCol = new VariableCollection<>();
         UnvariableCollection<Integer> unvarcol = new UnvariableCollection<>();
-
-        varCol.add(1);
+        try {
+            unvarcol.add(1);
+        } catch (UnsupportedOperationException ex) {
+            System.out.println("Because it's unvariable.");
+        }
+        varCol.add(1); // Exception in thread "main" java.lang.ArrayStoreException: java.lang.Integer !
     }
-    // Exception in thread "main" java.lang.ArrayStoreException: java.lang.Integer !
 }
 
 // написать минимальную немодифицицрованную коллекцию (потом написать модифицированную)
