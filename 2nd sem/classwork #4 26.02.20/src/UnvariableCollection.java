@@ -6,7 +6,7 @@ public class UnvariableCollection<T> extends AbstractCollection {
 
     // constructors -------------------- *
     public UnvariableCollection(){
-        this.data = (T[]) new Objects[0];
+        this.data = (T[]) new Objects[10];
         this.size = 0;
      }
 

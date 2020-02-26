@@ -6,7 +6,7 @@ public class VariableCollection<T> extends AbstractCollection {
 
     // constructors -------------------- *
     public VariableCollection(){
-        this.data = (T[]) new Objects[0];
+        this.data = (T[]) new Objects[10];
         this.size = 0;
     }
 
@@ -35,7 +35,7 @@ public class VariableCollection<T> extends AbstractCollection {
         if (data.length <= size) {
 
         }
-        T[] dataCheck = (T[]) new Objects[0];
+        T[] dataCheck = (T[]) new Objects[10];
         System.arraycopy(data, 0, dataCheck, 0, data.length);
         data[size] = (T) element;
         size++;
