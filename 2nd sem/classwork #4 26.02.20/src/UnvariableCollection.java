@@ -1,16 +1,16 @@
 import java.util.*;
 
-public class MyCollection<T> extends AbstractCollection {
+public class UnvariableCollection<T> extends AbstractCollection {
     private T[] data;
     private int size;
 
     // constructors -------------------- *
-    public MyCollection(){
+    public UnvariableCollection(){
         this.data = (T[]) new Objects[0];
         this.size = 0;
      }
 
-    public MyCollection(Collection <? extends T> col) {
+    public UnvariableCollection(Collection <? extends T> col) {
         this.data = (T[]) new Objects[col.size()];
         Iterator <? extends T> iter = col.iterator();
         while (iter.hasNext()) {

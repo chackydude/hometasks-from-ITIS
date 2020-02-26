@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Collections;
 
 public class Test {
     public static void main(String[] args) {
@@ -8,7 +7,7 @@ public class Test {
         list.add(1);
         list.add(2);
         list.add(3);
-        Collection<Integer> collection = new MyCollection<>(list);
+        Collection<Integer> collection = new UnvariableCollection<>(list);
         for (Object element : collection) {
             System.out.println(element);
         }
