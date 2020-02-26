@@ -1,4 +1,7 @@
-import java.util.*;
+import java.util.AbstractCollection;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.Objects;
 
 public class UnvariableCollection<T> extends AbstractCollection {
     private T[] data;
@@ -10,9 +13,9 @@ public class UnvariableCollection<T> extends AbstractCollection {
         this.size = 0;
      }
 
-    public UnvariableCollection(Collection <? extends T> col) {
+    public UnvariableCollection(Collection<? extends T> col) {
         this.data = (T[]) new Objects[col.size()];
-        Iterator <? extends T> iter = col.iterator();
+        Iterator<? extends T> iter = col.iterator();
         while (iter.hasNext()) {
             this.data[this.size] = iter.next();
             this.size++;

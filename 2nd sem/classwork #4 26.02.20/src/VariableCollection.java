@@ -1,4 +1,7 @@
-import java.util.*;
+import java.util.AbstractCollection;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.Objects;
 
 public class VariableCollection<T> extends AbstractCollection {
     private T[] data;
@@ -35,7 +38,8 @@ public class VariableCollection<T> extends AbstractCollection {
         if (data.length <= size) {
 
         }
-        T[] dataCheck = (T[]) new Objects[10];
+        T[] dataCheck;
+        dataCheck = (T[]) new Objects[10];
         System.arraycopy(data, 0, dataCheck, 0, data.length);
         data[size] = (T) element;
         size++;
