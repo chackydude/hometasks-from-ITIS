@@ -104,11 +104,11 @@ public class VariableCollection<T> extends AbstractCollection {
             return element;
         }
 
-        @Override
-        public void remove(T element) {
-            for (int i = 0; i < size; i++) {
-
-            }
-        }
+//        @Override
+//        public void remove(T element) {
+//            for (int i = 0; i < size; i++) {
+//
+//            }
+//        }
     }
 }
