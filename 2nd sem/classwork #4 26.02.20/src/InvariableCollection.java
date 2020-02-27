@@ -3,17 +3,17 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.Objects;
 
-public class UnvariableCollection<T> extends AbstractCollection {
+public class InvariableCollection<T> extends AbstractCollection {
     private T[] data;
     private int size;
 
     // constructors -------------------- *
-    public UnvariableCollection(){
+    public InvariableCollection(){
         this.data = (T[]) new Objects[10];
         this.size = 0;
      }
 
-    public UnvariableCollection(Collection<? extends T> col) {
+    public InvariableCollection(Collection<? extends T> col) {
         this.data = (T[]) new Objects[col.size()];
         Iterator<? extends T> iter = col.iterator();
         while (iter.hasNext()) {

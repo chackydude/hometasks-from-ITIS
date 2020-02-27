@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Test {
     public static void main(String[] args) {
@@ -8,15 +9,23 @@ public class Test {
         list.add(2);
         list.add(3);
 
-
-        VariableCollection<Integer> varCol = new VariableCollection<>();
-        UnvariableCollection<Integer> unvarcol = new UnvariableCollection<>();
+        // init collections
+        VariableCollection<Integer> varCol = new VariableCollection<>(list);
+        InvariableCollection<Integer> unvarcol = new InvariableCollection<>();
+        // trying to change Unvariable Collection
         try {
             unvarcol.add(1);
         } catch (UnsupportedOperationException ex) {
             System.out.println("Because it's unvariable.");
         }
-        varCol.add(1); // Exception in thread "main" java.lang.ArrayStoreException: java.lang.Integer !
+
+        Iterator<Integer> iterator = varCol.iterator();
+        System.out.println(varCol.size());
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
+        }
+        System.out.println(iterator.hasNext());
+        varCol.remove(1);
     }
 }
 
