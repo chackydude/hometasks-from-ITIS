@@ -54,6 +54,15 @@ class LinkedList<T> {
         }
         return element;
     }
+
+    public void  remove(T value) {
+        Node element = this.head;
+        while (element.value != value) {
+            element = element.next;
+        }
+        
+    }
+
     // ---- Node Class ----
     private class Node {
         private Node next;
