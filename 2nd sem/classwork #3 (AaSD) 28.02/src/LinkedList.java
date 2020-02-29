@@ -1,6 +1,6 @@
 class LinkedList<T> {
-    private Node head;
-    private int amount;
+    public Node head;
+    public int amount;
 
     // ---- constructor ---
     public LinkedList() {
@@ -10,67 +10,105 @@ class LinkedList<T> {
 
     // ---- methods -------
     public void add(T value) {
-        Node element = new Node(value);
         if (this.head == null) {
-            this.head = new Node(element.value);
+            this.head = new Node(value);
+        } else {
+            Node nextNode;
+            nextNode = this.head;
+            while (nextNode.next != null) {
+                nextNode = nextNode.next;
+            }
+            nextNode.next = new Node(value);
         }
-        Node nextNode;
-        nextNode = this.head.next;
-        while (nextNode != null) {
-            nextNode = nextNode.next;
-        }
-        nextNode.next = element;
-        amount++;
+        this.amount++;
     }
 
     public void addFirst(T value) {
-        Node buffer1, buffer2;
-        buffer1 = this.head;
-        while (buffer1.next != null) {
-            buffer2 = buffer1.next;
-            buffer1.next = buffer1;
-            buffer1.next = buffer2;
-        }
-        this.head = new Node(value);
-        amount++;
-    }
-
-    public void addAfter(T value) {
-        Node element = this.head;
         Node buffer;
-        while (element.value != value) {
-            element = element.next;
+        if (this.head == null) {
+            this.head = new Node(value);
+        } else {
+            buffer = this.head;
+            this.head = new Node(value);
+            this.head.next = buffer;
         }
-        buffer = element.next.next;
-        element.next = new Node(value);
-        element.next.next = buffer;
+        this.amount++;
+    }
+
+    // try-catch my own exception
+    public void addAfter(T findValue, T addVal) {
+        Node buffer;
+        if (this.head == null) {
+            //exception
+        } else {
+            Node node = this.head;
+            while (node.value != findValue) {
+                node = node.next;
+            }
+            buffer = new Node(addVal);
+            buffer.next = node.next;
+            node.next = buffer;
+        }
         amount++;
     }
 
-    public Node get(T value) {
-        Node element = this.head;
-        while (element.value != value) {
-            element = element.next;
+    // try-catch my own exception
+    public Node get(int index) {
+        if (index > amount || this.head == null) {
+            return null;
+            // exception
+        } else {
+            Node node = this.head;
+            for (int i = 0; i < index; i++) {
+                node = node.next;
+            }
+            return node;
         }
-        return element;
     }
 
+    public int size() {
+        return this.amount;
+    }
+
+    // by value
+    // try-catch my own exception
     public void  remove(T value) {
-        Node element = this.head;
-        while (element.value != value) {
-            element = element.next;
+
+    }
+
+    // by index
+    // try-catch my own exception
+    public void  remove(int index) {
+
+    }
+
+    public void merge(LinkedList list) {
+        if (this.head == null) {
+            this.head = list.head;
+        } else {
+            Node node = this.head;
+            while (node.next != null) {
+                node = node.next;
+            }
+            node.next = list.head;
         }
-        
+        this.amount += list.amount;
     }
 
     // ---- Node Class ----
     private class Node {
         private Node next;
         private T value;
+        private int index;
 
         public Node(T value) {
             this.next = null;
             this.value = value;
+        }
+
+        @Override
+        public String toString() {
+            return "{value : " + this.value + "; next: " + this.next + "}";
         }
     }
 }
