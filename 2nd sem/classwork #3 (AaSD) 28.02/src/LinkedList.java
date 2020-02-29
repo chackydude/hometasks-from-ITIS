@@ -1,3 +1,5 @@
+import javax.management.ListenerNotFoundException;
+
 class LinkedList<T> {
     public Node head;
     public int amount;
@@ -35,11 +37,10 @@ class LinkedList<T> {
         this.amount++;
     }
 
-    // try-catch my own exception
-    public void addAfter(T findValue, T addVal) {
+    public void addAfter(T findValue, T addVal) throws LinkedListOutOfBoundsException{
         Node buffer;
         if (this.head == null) {
-            //exception
+            throw new LinkedListOutOfBoundsException("This list is empty");
         } else {
             Node node = this.head;
             while (node.value != findValue) {
@@ -52,11 +53,9 @@ class LinkedList<T> {
         amount++;
     }
 
-    // try-catch my own exception
-    public Node get(int index) {
-        if (index > amount || this.head == null) {
-            return null;
-            // exception
+    public Node getByIndex(int index) {
+        if (index >= amount || this.head == null) {
+            throw new LinkedListOutOfBoundsException("This index doesn't exist");
         } else {
             Node node = this.head;
             for (int i = 0; i < index; i++) {
@@ -70,16 +69,30 @@ class LinkedList<T> {
         return this.amount;
     }
 
-    // by value
-    // try-catch my own exception
-    public void  remove(T value) {
-
+    public void  removeValue(T value) throws LinkedListOutOfBoundsException {
+        if (this.head == null) {
+            throw new LinkedListOutOfBoundsException("This list is empty");
+        } else {
+            Node node = this.head;
+            while (node.next.value != value) {
+                node = node.next;
+            }
+            if (node != null) {
+                node.next = node.next.next;
+            }
+        }
     }
 
-    // by index
-    // try-catch my own exception
-    public void  remove(int index) {
-
+    public void  removeByIndex(int index) throws LinkedListOutOfBoundsException{
+        if (this.head == null || index >= amount) {
+            throw new LinkedListOutOfBoundsException("This index doesn't exist");
+        } else {
+            Node node = this.head;
+            for (int i = 0; i < index-1; i++) {
+                node = node.next;
+            }
+            node.next = node.next.next;
+        }
     }
 
     public void merge(LinkedList list) {
