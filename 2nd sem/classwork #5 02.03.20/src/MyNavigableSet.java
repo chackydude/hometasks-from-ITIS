@@ -37,7 +37,7 @@ public class MyNavigableSet<T> extends AbstractSet<T> implements NavigableSet<T>
         }
     }
 
-    // first element which strictly less than arg
+    // first element which strictly less than arg, else null
     @Override
     public T lower(T element) {
         if (this.data.size() == 0) {
@@ -56,7 +56,7 @@ public class MyNavigableSet<T> extends AbstractSet<T> implements NavigableSet<T>
         }
     }
 
-    // first element which not strictly less than arg
+    // first element which not strictly less than arg, else null
     @Override
     public T floor(T element) {
         if (this.data.size() == 0) {
@@ -75,6 +75,7 @@ public class MyNavigableSet<T> extends AbstractSet<T> implements NavigableSet<T>
         }
     }
 
+    // returns the closest element in the set, but which is greater than or equal to the arg, else null
     @Override
     public T ceiling(T element) {
         if (this.data.size() == 0) return null;
@@ -90,24 +91,48 @@ public class MyNavigableSet<T> extends AbstractSet<T> implements NavigableSet<T>
         }
     }
 
+    // returns the closest element in the set, but strictly more than arg, else null
     @Override
-    public T higher(T t) {
-        return null;
+    public T higher(T element) {
+        if (this.data.size() == 0) {
+            return null;
+        } else {
+            for (int i = 0; i < this.data.size(); i++) {
+                if (this.comparator.compare(this.data.get(i), element) > 0) {
+                    return this.data.get(i);
+                }
+            }
+            return null;
+        }
     }
 
+    // deletes and returns min-element (first)
     @Override
     public T pollFirst() {
-        return null;
+        if (this.data.size() == 0) {
+            return null;
+        } else {
+            T first = this.data.get(0);
+            this.data.remove(this.data.get(0));
+            return first;
+        }
     }
 
+    // deletes and returns max-element (last)
     @Override
     public T pollLast() {
-        return null;
+        if (this.data.size() == 0) {
+            return null;
+        } else {
+            T last = this.data.get(this.data.size() - 1);
+            this.data.remove(this.data.get(this.data.size() - 1));
+            return last;
+        }
     }
 
     @Override
     public Iterator<T> iterator() {
-        return null;
+        return new NavIterator<>();
     }
 
     @Override
@@ -162,17 +187,39 @@ public class MyNavigableSet<T> extends AbstractSet<T> implements NavigableSet<T>
 
     @Override
     public T first() {
-        return this.data.get(0);
+        return null;
     }
 
     @Override
     public T last() {
-        return this.data.get(this.data.size() - 1);
+        return null;
     }
 
     @Override
     public String toString() {
         return this.data.toString();
+    }
+
+    // iterator
+    private class NavIterator<T> implements Iterator<T> {
+        private int cursor;
+
+        public NavIterator() {
+            this.cursor = 0;
+        }
+
+        @Override
+        public boolean hasNext() {
+            if (data.get(cursor+1) != null) {
+                return true;
+            } else return false;
+        }
+
+        @Override
+        public T next() {
+            cursor++;
+            return (T) data.get(cursor-1);
+        }
     }
 }
 
