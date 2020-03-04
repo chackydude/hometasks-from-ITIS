@@ -15,10 +15,15 @@ public class Test {
             array[6] = "6";
         }
 
-        String[] array1 = new String[]{};
+        String[] array1 = new String[]{"1", "2", "3", "4", "5"};
         String[] array2 = new String[] {null, null, null, null, null};
 
-        ModifiedStringArrayIterator iterator = new ModifiedStringArrayIterator(array);
+        UniqIterator iterator3 = new UniqIterator(array1);
+        while (iterator3.hasNext()) {
+            System.out.println(iterator3.next());
+        }
+        System.out.println("\n------------");
+        ModifiedStringArrayIterator iterator = new ModifiedStringArrayIterator(array1);
         while (iterator.hasNext()) {
             System.out.println(iterator.next());
         }
