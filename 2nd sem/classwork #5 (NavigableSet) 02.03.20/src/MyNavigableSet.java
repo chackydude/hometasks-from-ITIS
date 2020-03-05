@@ -153,6 +153,7 @@ public class MyNavigableSet<T> extends AbstractSet<T> implements NavigableSet<T>
     // inclusive - true : add in the result-set, false - not
     @Override
     public NavigableSet<T> subSet(T fromElement, boolean fromInclusive, T toElement, boolean toInclusive) {
+        // if x100500
         return null;
     }
 
