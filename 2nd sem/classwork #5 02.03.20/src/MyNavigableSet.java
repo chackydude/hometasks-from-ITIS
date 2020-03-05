@@ -137,12 +137,17 @@ public class MyNavigableSet<T> extends AbstractSet<T> implements NavigableSet<T>
 
     @Override
     public NavigableSet<T> descendingSet() {
-        return null;
+        MyNavigableSet<T> result = new MyNavigableSet<>(this.comparator);
+        for (int i = this.data.size()-1; i >= 0; i--) {
+            result.add(this.data.get(i));
+        }
+        return result;
     }
 
+    // NavIterator has descending-methods (descending-next, descending-hasNext)
     @Override
     public Iterator<T> descendingIterator() {
-        return null;
+        return new NavIterator<>();
     }
 
     @Override
@@ -203,24 +208,35 @@ public class MyNavigableSet<T> extends AbstractSet<T> implements NavigableSet<T>
     // iterator
     private class NavIterator<T> implements Iterator<T> {
         private int cursor;
+        private int descendingCursor;
 
         public NavIterator() {
             this.cursor = 0;
+            this.descendingCursor = data.size()-1;
         }
 
         @Override
         public boolean hasNext() {
-            if (data.get(cursor+1) != null) {
-                return true;
-            } else return false;
+            return this.cursor < data.size();
         }
 
         @Override
         public T next() {
-            cursor++;
-            return (T) data.get(cursor-1);
+            this.cursor++;
+            return (T) data.get(this.cursor - 1);
+        }
+
+        public boolean descendingHasNext() {
+            return this.descendingCursor > 0;
+        }
+
+        public T descendingNext() {
+            this.descendingCursor--;
+            return (T) data.get(this.descendingCursor + 1);
         }
     }
+
+
 }
 
 // TODO: NavigableSet, SortedSet, AbstractClass
