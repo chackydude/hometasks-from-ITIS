@@ -150,6 +150,7 @@ public class MyNavigableSet<T> extends AbstractSet<T> implements NavigableSet<T>
         return new NavIterator<>();
     }
 
+    // inclusive - true : включаем в set, false - не включаем в set
     @Override
     public NavigableSet<T> subSet(T fromElement, boolean fromInclusive, T toElement, boolean toInclusive) {
         return null;
@@ -192,12 +193,12 @@ public class MyNavigableSet<T> extends AbstractSet<T> implements NavigableSet<T>
 
     @Override
     public T first() {
-        return null;
+        return this.data.get(0);
     }
 
     @Override
     public T last() {
-        return null;
+        return this.data.get(this.data.size() - 1);
     }
 
     @Override
@@ -235,8 +236,6 @@ public class MyNavigableSet<T> extends AbstractSet<T> implements NavigableSet<T>
             return (T) data.get(this.descendingCursor + 1);
         }
     }
-
-
 }
 
 // TODO: NavigableSet, SortedSet, AbstractClass
