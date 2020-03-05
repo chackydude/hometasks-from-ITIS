@@ -19,7 +19,9 @@ public class Test {
         System.out.println(navSet.floor(4));
         SortedSet sort = navSet.subSet("3", "6");
         sort.add("9");
+        SortedSet head = navSet.headSet("6");
         System.out.println(sort.toString());
         System.out.println(navSet.toString());
+        System.out.println(head.toString());
     }
 }

@@ -150,7 +150,7 @@ public class MyNavigableSet<T> extends AbstractSet<T> implements NavigableSet<T>
         return new NavIterator<>();
     }
 
-    // inclusive - true : включаем в set, false - не включаем в set
+    // inclusive - true : add in the result-set, false - not
     @Override
     public NavigableSet<T> subSet(T fromElement, boolean fromInclusive, T toElement, boolean toInclusive) {
         return null;
@@ -176,10 +176,11 @@ public class MyNavigableSet<T> extends AbstractSet<T> implements NavigableSet<T>
         return this.comparator;
     }
 
-    // все манипуляции над SortedSet - отражаются на MyNavigableSet
+    // returns certain range (set) of MyNavigableSet
     @Override
     public SortedSet<T> subSet(T fromElement, T toElement) {
         SortedSet<T> result = new MyNavigableSet<T>(this.comparator);
+        // if from == to
         if (this.comparator.compare(fromElement, toElement) == 0) {
             return result;
         } else {
@@ -192,14 +193,35 @@ public class MyNavigableSet<T> extends AbstractSet<T> implements NavigableSet<T>
         }
     }
 
+    // returns range (set) to certain element of MyNavigableSet
     @Override
     public SortedSet<T> headSet(T toElement) {
-        return null;
+        // if head bigger than every element in the set
+        if (this.comparator.compare(toElement, this.data.get(this.data.size() - 1)) > 0) {
+            return this;
+        } else {
+            SortedSet<T> result = new MyNavigableSet<T>(this.comparator);
+            for (int i = 0; i < this.data.indexOf(toElement); i++) {
+                result.add(this.data.get(i));
+            }
+            return result;
+        }
     }
 
+    // returns range (set) from certain element of MyNavigableSet
     @Override
     public SortedSet<T> tailSet(T fromElement) {
-        return null;
+        // if tail less than every element in the set
+        if (this.comparator.compare(fromElement, this.data.get(this.data.size() - 1)) <= 0) {
+            return this;
+        } else {
+            SortedSet<T> result = new MyNavigableSet<T>(this.comparator);
+            int end = this.data.size();
+            for (int i = this.data.indexOf(fromElement); i < end; i++) {
+                result.add(this.data.get(i));
+            }
+            return result;
+        }
     }
 
     @Override
