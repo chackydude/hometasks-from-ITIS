@@ -16,15 +16,15 @@ public class Stack<T> {
     // adds element into the end of the Stack
     public void add(T elem) {
         this.lastElement = elem;
-        this.array[amountOfElements] = elem;
+        this.array[this.amountOfElements] = elem;
         this.amountOfElements++;
     }
 
     // returns and deletes element from the end of the Stack
     public T pop() {
         T buffer = this.lastElement;
-        this.lastElement = array[amountOfElements - 2];
-        this.array[amountOfElements - 1] = null;
+        this.lastElement = array[this.amountOfElements - 2];
+        this.array[this.amountOfElements - 1] = null;
         this.amountOfElements--;
         return buffer;
     }
@@ -42,6 +42,6 @@ public class Stack<T> {
     // returns array of the Stack at that moment
     @Override
     public String toString() {
-        return Arrays.toString(array);
+        return Arrays.toString(this.array);
     }
 }

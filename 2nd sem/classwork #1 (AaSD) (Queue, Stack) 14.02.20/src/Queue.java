@@ -16,20 +16,20 @@ public class Queue <T> {
 
     // adds element in the end of Queue
     public void add(T elem) {
-        this.array[amountOfElements] = elem;
-        if (amountOfElements == 0) this.firstElement = elem;
-        amountOfElements++;
+        this.array[this.amountOfElements] = elem;
+        if (this.amountOfElements == 0) this.firstElement = elem;
+        this.amountOfElements++;
     }
 
     // returns and deletes first element in the Queue
     public T pop() {
         T buffer = this.firstElement;
-        for (int i = 0; i < amountOfElements-1; i++) {
+        for (int i = 0; i < this.amountOfElements-1; i++) {
             this.array[i] = this.array[i+1];
         }
-        if (amountOfElements > 0) this.array[amountOfElements - 1] = null;
+        if (this.amountOfElements > 0) this.array[this.amountOfElements - 1] = null;
         this.firstElement = this.array[0];
-        amountOfElements--;
+        if (this.amountOfElements > 0) this.amountOfElements--;
         return buffer;
     }
 
@@ -40,9 +40,7 @@ public class Queue <T> {
 
     // returns size of Queue
     public int size() {
-        if (this.amountOfElements > 0) {
-            return this.amountOfElements;
-        } else return 0;
+        return amountOfElements;
     }
 
     // returns array of the Queue in that moment

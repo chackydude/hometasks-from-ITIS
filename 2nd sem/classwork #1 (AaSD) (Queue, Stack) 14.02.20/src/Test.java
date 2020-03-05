@@ -5,6 +5,7 @@ public class Test {
         for (int i = 1; i < 6; i++) {
             intStack.add(i);
         }
+        System.out.println("Изначальный стек: " + intStack.toString());
         System.out.println("Элемент снаружи стека: " + intStack.peek());
         System.out.println("Удаляем из стека этот элемент: " + intStack.pop());
         System.out.println("Размер стека на данный момент: " + intStack.size());
@@ -18,9 +19,9 @@ public class Test {
         for (int i = 0; i < 2; i++) {
             intQueue.add(i);
         }
+        System.out.println("Изначальная очередь: " + intQueue.toString());
         System.out.println("Первый элемент в очереди: " + intQueue.peek());
         System.out.println("Размер очереди на данный момент: " + intQueue.size());
-        System.out.println("Удаляем из очереди этот элемент: " + intQueue.pop());
         System.out.println("Удаляем из очереди этот элемент: " + intQueue.pop());
         System.out.println("Удаляем из очереди этот элемент: " + intQueue.pop());
         System.out.println("Первый элемент в новой очереди: " + intQueue.peek());

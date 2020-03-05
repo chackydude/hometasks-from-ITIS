@@ -1,6 +1,7 @@
 import java.util.Comparator;
 import java.util.NavigableSet;
 import java.util.Objects;
+import java.util.SortedSet;
 
 public class Test {
     public static void main(String[] args) {
@@ -16,5 +17,9 @@ public class Test {
 
         System.out.println(navSet.toString());
         System.out.println(navSet.floor(4));
+        SortedSet sort = navSet.subSet("3", "6");
+        sort.add("9");
+        System.out.println(sort.toString());
+        System.out.println(navSet.toString());
     }
 }
