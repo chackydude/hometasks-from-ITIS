@@ -1,22 +1,39 @@
 import java.util.*;
 
+/**
+ * Class MyNavigableSet
+ * @version 0.1
+ * @author trofimovdanil946@gmail.com
+ */
+
 public class MyNavigableSet<T> extends AbstractSet<T> implements NavigableSet<T> {
     private ArrayList<T> data;
     private Comparator<T>  comparator;
-    private SortedSet<T> sortedSet;
 
-    // constructors
+    /**
+     * constructor
+     * @param comparator
+     */
     public MyNavigableSet(Comparator<T> comparator) {
         this.comparator = comparator;
         this.data = new ArrayList<T>(100);
     }
 
+    /**
+     * constructor
+     * @param comparator
+     * @param list
+     */
     public MyNavigableSet(Comparator<T> comparator, ArrayList<T> list) {
         this.comparator = comparator;
         this.data = list;
     }
 
-    // adds an element comparing according to the comparator
+    /**
+     * adds an element comparing according to the comparator
+     * @param element
+     * @return
+     */
     public boolean add(T element) {
         if (data.size() == 0) {
             data.add(element);
@@ -37,7 +54,11 @@ public class MyNavigableSet<T> extends AbstractSet<T> implements NavigableSet<T>
         }
     }
 
-    // first element which strictly less than arg, else null
+    /**
+     * first element which strictly less than arg, else null
+     * @param element
+     * @return
+     */
     @Override
     public T lower(T element) {
         if (this.data.size() == 0) {
@@ -56,7 +77,11 @@ public class MyNavigableSet<T> extends AbstractSet<T> implements NavigableSet<T>
         }
     }
 
-    // first element which not strictly less than arg, else null
+    /**
+     * first element which not strictly less than arg, else null
+     * @param element
+     * @return
+     */
     @Override
     public T floor(T element) {
         if (this.data.size() == 0) {
@@ -75,7 +100,11 @@ public class MyNavigableSet<T> extends AbstractSet<T> implements NavigableSet<T>
         }
     }
 
-    // returns the closest element in the set, but which is greater than or equal to the arg, else null
+    /**
+     * returns the closest element in the set, but which is greater than or equal to the arg, else null
+     * @param element
+     * @return
+     */
     @Override
     public T ceiling(T element) {
         if (this.data.size() == 0) return null;
@@ -91,7 +120,11 @@ public class MyNavigableSet<T> extends AbstractSet<T> implements NavigableSet<T>
         }
     }
 
-    // returns the closest element in the set, but strictly more than arg, else null
+    /**
+     * returns the closest element in the set, but strictly more than arg, else null
+     * @param element
+     * @return
+     */
     @Override
     public T higher(T element) {
         if (this.data.size() == 0) {
@@ -106,7 +139,10 @@ public class MyNavigableSet<T> extends AbstractSet<T> implements NavigableSet<T>
         }
     }
 
-    // deletes and returns min-element (first)
+    /**
+     * deletes and returns min-element (first)
+     * @return
+     */
     @Override
     public T pollFirst() {
         if (this.data.size() == 0) {
@@ -118,7 +154,10 @@ public class MyNavigableSet<T> extends AbstractSet<T> implements NavigableSet<T>
         }
     }
 
-    // deletes and returns max-element (last)
+    /**
+     * deletes and returns max-element (last)
+     * @return
+     */
     @Override
     public T pollLast() {
         if (this.data.size() == 0) {
@@ -144,15 +183,22 @@ public class MyNavigableSet<T> extends AbstractSet<T> implements NavigableSet<T>
         return result;
     }
 
-    // NavIterator has descending-methods (descendingNext, descendingHasNext)
+    /**
+     * NavIterator has descending-methods (descendingNext, descendingHasNext)
+     * @return
+     */
     @Override
     public Iterator<T> descendingIterator() {
         return new NavIterator<>();
     }
 
-    /*
-     inclusive - true : add in the result-set, false - not
-     returns certain range (set) of MyNavigableSet
+    /**
+     *inclusive - true : add in the result-set, false - not returns certain range (set) of MyNavigableSet
+     * @param fromElement
+     * @param fromInclusive
+     * @param toElement
+     * @param toInclusive
+     * @return
      */
     @Override
     public NavigableSet<T> subSet(T fromElement, boolean fromInclusive, T toElement, boolean toInclusive) {
@@ -187,16 +233,22 @@ public class MyNavigableSet<T> extends AbstractSet<T> implements NavigableSet<T>
         return result;
     }
 
-    // returns range of the set
+    /**
+     * returns range of the set
+     * @param start
+     * @param end
+     */
     public void sliceRange(int start, int end) {
         for (int i = start; i <= end; i++) {
             this.add(this.data.get(i));
         }
     }
 
-    /*
-     inclusive - true : add in the result-set, false - not
-     returns range (set) to certain element of MyNavigableSet
+    /**
+     * inclusive - true : add in the result-set, false - not returns range (set) to certain element of MyNavigableSet
+     * @param toElement
+     * @param inclusive
+     * @return
      */
     @Override
     public NavigableSet<T> headSet(T toElement, boolean inclusive) {
@@ -210,9 +262,11 @@ public class MyNavigableSet<T> extends AbstractSet<T> implements NavigableSet<T>
         return result;
     }
 
-    /*
-     inclusive - true : add in the result-set, false - not
-     returns range (set) from certain element of MyNavigableSet
+    /**
+     * inclusive - true : add in the result-set, false - not returns range (set) from certain element of MyNavigableSet
+     * @param fromElement
+     * @param inclusive
+     * @return
      */
     @Override
     public NavigableSet<T> tailSet(T fromElement, boolean inclusive) {
@@ -236,7 +290,12 @@ public class MyNavigableSet<T> extends AbstractSet<T> implements NavigableSet<T>
         return this.comparator;
     }
 
-    // returns certain range (set) of MyNavigableSet
+    /**
+     * returns certain range (set) of MyNavigableSet
+     * @param fromElement
+     * @param toElement
+     * @return
+     */
     @Override
     public SortedSet<T> subSet(T fromElement, T toElement) {
         SortedSet<T> result = new MyNavigableSet<T>(this.comparator);
@@ -253,7 +312,11 @@ public class MyNavigableSet<T> extends AbstractSet<T> implements NavigableSet<T>
         }
     }
 
-    // returns range (set) to certain element of MyNavigableSet
+    /**
+     * returns range (set) to certain element of MyNavigableSet
+     * @param toElement
+     * @return
+     */
     @Override
     public SortedSet<T> headSet(T toElement) {
         // if head bigger than every element in the set
@@ -268,7 +331,11 @@ public class MyNavigableSet<T> extends AbstractSet<T> implements NavigableSet<T>
         }
     }
 
-    // returns range (set) from certain element of MyNavigableSet
+    /**
+     * returns range (set) from certain element of MyNavigableSet
+     * @param fromElement
+     * @return
+     */
     @Override
     public SortedSet<T> tailSet(T fromElement) {
         // if tail less than every element in the set
