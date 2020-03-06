@@ -16,12 +16,8 @@ public class Test {
         navSet.add("7");
 
         System.out.println(navSet.toString());
-        System.out.println(navSet.floor(4));
-        SortedSet sort = navSet.subSet("3", "6");
-        sort.add("9");
-        SortedSet head = navSet.headSet("6");
-        System.out.println(sort.toString());
-        System.out.println(navSet.toString());
-        System.out.println(head.toString());
+        System.out.println(navSet.subSet("3", true, "7",true));
+        System.out.println(navSet.headSet("3", true));
+        System.out.println(navSet.tailSet("4", true));
     }
 }

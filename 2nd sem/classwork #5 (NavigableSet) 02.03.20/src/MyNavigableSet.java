@@ -7,8 +7,8 @@ import java.util.*;
  */
 
 public class MyNavigableSet<T> extends AbstractSet<T> implements NavigableSet<T> {
-    private ArrayList<T> data;
-    private Comparator<T>  comparator;
+    public ArrayList<T> data;
+    public Comparator<T>  comparator;
 
     /**
      * constructor
@@ -212,22 +212,22 @@ public class MyNavigableSet<T> extends AbstractSet<T> implements NavigableSet<T>
                 } else {
                     start = this.data.indexOf(fromElement);
                     end = this.data.indexOf(toElement);
-                    result.sliceRange(start, end);
+                    sliceRange(start, end, result);
                 }
             } else {
                 start = this.data.indexOf(fromElement);
                 end = this.data.indexOf(toElement) - 1;
-                result.sliceRange(start, end);
+                sliceRange(start, end, result);
             }
         } else {
             if (toInclusive) {
                 start = this.data.indexOf(fromElement) + 1;
                 end = this.data.indexOf(toElement);
-                result.sliceRange(start, end);
+                sliceRange(start, end, result);
             } else {
                 start = this.data.indexOf(fromElement) + 1;
                 end = this.data.indexOf(toElement) - 1;
-                result.sliceRange(start, end);
+                sliceRange(start, end, result);
             }
         }
         return result;
@@ -238,9 +238,9 @@ public class MyNavigableSet<T> extends AbstractSet<T> implements NavigableSet<T>
      * @param start
      * @param end
      */
-    public void sliceRange(int start, int end) {
+    public void sliceRange(int start, int end, MyNavigableSet result) {
         for (int i = start; i <= end; i++) {
-            this.add(this.data.get(i));
+            result.add(this.data.get(i));
         }
     }
 
@@ -258,7 +258,7 @@ public class MyNavigableSet<T> extends AbstractSet<T> implements NavigableSet<T>
         if (inclusive) {
             end = this.data.indexOf(toElement);
         } else end = this.data.indexOf(toElement) - 1;
-        result.sliceRange(start,end);
+        sliceRange(start, end, result);
         return result;
     }
 
@@ -276,7 +276,7 @@ public class MyNavigableSet<T> extends AbstractSet<T> implements NavigableSet<T>
         if (inclusive) {
             start = this.data.indexOf(fromElement);
         } else start = this.data.indexOf(fromElement) + 1;
-        result.sliceRange(start,end);
+        sliceRange(start, end, result);
         return result;
     }
 
