@@ -1,7 +1,4 @@
-import java.util.AbstractCollection;
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.Objects;
+import java.util.*;
 
 public class VariableCollection<T> extends AbstractCollection {
     private T[] data; // elements
@@ -82,6 +79,12 @@ public class VariableCollection<T> extends AbstractCollection {
             }
         }
         return false;
+    }
+
+    // compare collections
+
+    public boolean equals(VariableCollection collection) {
+        return this.size == collection.size && Arrays.equals(this.data, collection.data);
     }
 
     // iterator ------------------------ *

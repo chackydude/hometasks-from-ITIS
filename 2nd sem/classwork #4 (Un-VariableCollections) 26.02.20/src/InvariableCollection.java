@@ -1,7 +1,4 @@
-import java.util.AbstractCollection;
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.Objects;
+import java.util.*;
 
 public class InvariableCollection<T> extends AbstractCollection {
     private T[] data;
@@ -32,6 +29,11 @@ public class InvariableCollection<T> extends AbstractCollection {
     public int size() {
         return this.size;
     }
+
+    public boolean equals(InvariableCollection collection) {
+        return this.size == collection.size && Arrays.equals(this.data, collection.data);
+    }
+
 
     // iterator ------------------------ *
     private class CollectionIterator<T> implements Iterator<T> {
