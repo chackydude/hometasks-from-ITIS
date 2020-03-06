@@ -150,21 +150,80 @@ public class MyNavigableSet<T> extends AbstractSet<T> implements NavigableSet<T>
         return new NavIterator<>();
     }
 
-    // inclusive - true : add in the result-set, false - not
+    /*
+     inclusive - true : add in the result-set, false - not
+     returns certain range (set) of MyNavigableSet
+     */
     @Override
     public NavigableSet<T> subSet(T fromElement, boolean fromInclusive, T toElement, boolean toInclusive) {
-        // if x100500
-        return null;
+        MyNavigableSet<T> result = new MyNavigableSet<T>(this.comparator);
+        int start;
+        int end;
+        if (fromInclusive) {
+            if (toInclusive) {
+                if (this.comparator.compare(fromElement, toElement) == 0) {
+                    result.add(fromElement);
+                } else {
+                    start = this.data.indexOf(fromElement);
+                    end = this.data.indexOf(toElement);
+                    result.sliceRange(start, end);
+                }
+            } else {
+                start = this.data.indexOf(fromElement);
+                end = this.data.indexOf(toElement) - 1;
+                result.sliceRange(start, end);
+            }
+        } else {
+            if (toInclusive) {
+                start = this.data.indexOf(fromElement) + 1;
+                end = this.data.indexOf(toElement);
+                result.sliceRange(start, end);
+            } else {
+                start = this.data.indexOf(fromElement) + 1;
+                end = this.data.indexOf(toElement) - 1;
+                result.sliceRange(start, end);
+            }
+        }
+        return result;
     }
 
+    // returns range of the set
+    public void sliceRange(int start, int end) {
+        for (int i = start; i <= end; i++) {
+            this.add(this.data.get(i));
+        }
+    }
+
+    /*
+     inclusive - true : add in the result-set, false - not
+     returns range (set) to certain element of MyNavigableSet
+     */
     @Override
     public NavigableSet<T> headSet(T toElement, boolean inclusive) {
-        return null;
+        MyNavigableSet<T> result = new MyNavigableSet<T>(this.comparator);
+        int start = 0;
+        int end;
+        if (inclusive) {
+            end = this.data.indexOf(toElement);
+        } else end = this.data.indexOf(toElement) - 1;
+        result.sliceRange(start,end);
+        return result;
     }
 
+    /*
+     inclusive - true : add in the result-set, false - not
+     returns range (set) from certain element of MyNavigableSet
+     */
     @Override
     public NavigableSet<T> tailSet(T fromElement, boolean inclusive) {
-        return null;
+        MyNavigableSet<T> result = new MyNavigableSet<T>(this.comparator);
+        int start;
+        int end = this.data.size() - 1;
+        if (inclusive) {
+            start = this.data.indexOf(fromElement);
+        } else start = this.data.indexOf(fromElement) + 1;
+        result.sliceRange(start,end);
+        return result;
     }
 
     @Override
