@@ -106,12 +106,5 @@ public class VariableCollection<T> extends AbstractCollection {
             this.cursor++;
             return element;
         }
-
-//        @Override
-//        public void remove(T element) {
-//            for (int i = 0; i < size; i++) {
-//
-//            }
-//        }
     }
 }
