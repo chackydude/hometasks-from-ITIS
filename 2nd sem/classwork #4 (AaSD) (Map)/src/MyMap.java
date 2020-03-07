@@ -1,93 +1,176 @@
-import java.util.AbstractMap;
-import java.util.Collection;
-import java.util.Map;
-import java.util.Set;
-import java.util.function.BiConsumer;
-import java.util.function.BiFunction;
-import java.util.function.Function;
+import java.util.*;
 
 public class MyMap<K,V> extends AbstractMap<K, V> {
-    protected MyMap() {
-        super();
+    private ArrayList<K> keys;
+    private ArrayList<V> values;
+
+    // constructors
+    public MyMap() {
+        this.keys = new ArrayList<K>(100);
+        this.values = new ArrayList<V>(100);
+    }
+
+    public MyMap(MyMap inMap) {
+        this.keys = inMap.keys;
+        this.values = inMap.values;
     }
 
     @Override
     public int size() {
-        return super.size();
+        return keys.size();
     }
 
     @Override
     public boolean isEmpty() {
-        return super.isEmpty();
+        return this.keys.size() == 0;
     }
 
     @Override
     public boolean containsValue(Object value) {
-        return super.containsValue(value);
+        return this.values.contains(value);
     }
 
     @Override
     public boolean containsKey(Object key) {
-        return super.containsKey(key);
+        return this.keys.contains(key);
     }
 
+    // returns value by key
     @Override
     public V get(Object key) {
-        return super.get(key);
+        if (this.keys.contains(key)) {
+            return this.values.get(this.keys.indexOf(key));
+        } else return null;
     }
 
+    // adds value in the map by key (returns - value what already was before for input key-mapping or null else
     @Override
     public V put(K key, V value) {
-        return super.put(key, value);
+        if (this.keys.contains(key)) {
+            V val = this.values.get(this.keys.indexOf(key));
+            this.values.add(this.keys.indexOf(key), value);
+            return val;
+        } else {
+            this.keys.add(this.keys.size(), key);
+            this.values.add(this.values.size(),value);
+            return null;
+        }
     }
 
+    // removes mapping key-value (returns - value what was before removing, - null if where was no such value)
     @Override
     public V remove(Object key) {
-        return super.remove(key);
+        if (this.keys.contains(key)) {
+            int index = this.keys.indexOf(key);
+            V val = this.values.get(index);
+            this.keys.remove(index);
+            this.values.remove(index);
+            return val;
+        } else {
+            return null;
+        }
     }
 
-    @Override
-    public void putAll(Map<? extends K, ? extends V> m) {
-        super.putAll(m);
+    // adds all mappings from inMap to this map
+    public void putAll(MyMap<K, V> inMap) {
+        for (int i = 0; i < inMap.keys.size(); i++) {
+            this.put(inMap.keys.get(i), inMap.values.get(i));
+        }
     }
 
+    // removes all mappings from map
     @Override
     public void clear() {
-        super.clear();
+        this.keys.clear();
+        this.values.clear();
     }
 
-    @Override
-    public Set<K> keySet() {
-        return super.keySet();
+    public Collection<K> keys() {
+        return this.keys;
     }
 
     @Override
     public Collection<V> values() {
-        return super.values();
+        return this.values;
     }
 
+    // returns set of Map's Entries
     @Override
-    public boolean equals(Object o) {
-        return super.equals(o);
+    public Set<Map.Entry<K, V>> entrySet() {
+        Set<Map.Entry<K, V>> result = new HashSet<>();
+        for (int i = 0; i < this.keys.size(); i++) {
+            Entry entry = new Entry(this.keys.get(i), this.values.get(i));
+            result.add((Map.Entry<K, V>) entry);
+        }
+        return result;
     }
 
+    // replaces oldValue to the newValue if in mapping key-value value == oldValue
     @Override
-    public int hashCode() {
-        return super.hashCode();
+    public boolean replace(K key, V oldValue, V newValue) {
+        if (this.get(key) == oldValue) {
+            int index = this.keys.indexOf(key);
+            this.keys.remove(index);
+            this.values.remove(index);
+            this.keys.add(index, key);
+            this.values.add(index, newValue);
+            return true;
+        } else return false;
     }
 
+    // replaces value in the old mapping key-value
     @Override
+    public V replace(K key, V value) {
+        if (this.containsKey(key)) {
+            int index = this.keys.indexOf(key);
+            V val = this.values.get(index);
+            this.keys.remove(index);
+            this.values.remove(index);
+            this.keys.add(index, key);
+            this.values.add(index, value);
+            return val;
+        } else return null;
+    }
+
     public String toString() {
-        return super.toString();
+        String result = "{";
+        for (int i = 0; i < this.keys.size()-1; i++) {
+            result += this.keys.get(i) + " : " + this.values.get(i) + ", ";
+        }
+        result = result + this.keys.get(this.keys.size()-1) + " : " + this.values.get(this.values.size()-1) + "}";
+        return result;
     }
 
-    @Override
-    protected Object clone() throws CloneNotSupportedException {
-        return super.clone();
-    }
+    // private Entry class
+    private class Entry<K,V> implements Map.Entry {
+        private K key;
+        private V value;
 
-    @Override
-    public Set<Entry<K, V>> entrySet() {
-        return null;
+        public Entry(K key, V value) {
+            this.key = key;
+            this.value = value;
+        }
+
+        @Override
+        public Object getKey() {
+            return this.key;
+        }
+
+        @Override
+        public Object getValue() {
+            return this.value;
+        }
+
+        @Override
+        public Object setValue(Object value) {
+            V val = this.value;
+            this.value = (V) value;
+            return val;
+        }
+
+        @Override
+        public String toString() {
+            return "{" + this.key + " : " + this.value + "}";
+        }
     }
 }
