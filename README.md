@@ -1,1 +1,1 @@
-# inf-practive
+# inf-practice
