@@ -1,4 +1,4 @@
-public class Student {
+public class Student implements Comparable {
     private int height;
     // height takes precedence
     private int iq;
@@ -22,5 +22,10 @@ public class Student {
 
     public void setIq(int iq) {
         this.iq = iq;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        return 0;
     }
 }
