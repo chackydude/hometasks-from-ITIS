@@ -14,7 +14,7 @@ public class Stream2 {
         list2.add(4);
 
         long max = list2.stream().max(Integer::compareTo).get();
-//      get() берет value у Optional
+//      get() берет value у Optional, Optional - контейнер для value
         list1.stream().filter((num) -> num > max).forEach(System.out::println);
 //      будет ли каждый раз запускаться поток list2.stream
 //      list1.stream().filter((num) -> num > list2.stream().max(Integer::compareTo).get()).forEach(System.out::println);
