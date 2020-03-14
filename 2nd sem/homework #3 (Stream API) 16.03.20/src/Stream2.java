@@ -16,7 +16,12 @@ public class Stream2 {
         long max = list2.stream().max(Integer::compareTo).get();
 //      get() берет value у Optional, Optional - контейнер для value
         list1.stream().filter((num) -> num > max).forEach(System.out::println);
-//      будет ли каждый раз запускаться поток list2.stream
-//      list1.stream().filter((num) -> num > list2.stream().max(Integer::compareTo).get()).forEach(System.out::println);
+/*      :: - оператор квадроточие, позволяет получить ссылку на метод, указанный в правой части, класса, указанного в левой
+        Компилятор выводит тип ссылки из контекста и приводит её к соответствующему функциональному интерфейсу.
+        В частности метод forEach принимает Consumer<? super T>, к нему и будет приведена ссылка на метод println,
+        возвращаемая выражением System.out::println
+ */
+        list1.stream().filter((num) -> num > list2.stream().max(Integer::compareTo).get()).forEach(System.out::println);
+        //TODO будет ли каждый раз запускаться поток list2.stream
     }
 }
