@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0768cd6b-8245-4dc4-a55b-c12295b0c3bf" name="Default Changelist" comment="" />
+    <list default="true" id="dd7b3a8f-d3aa-4faf-ba26-a2cb5ea0a383" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,18 +21,22 @@
   <component name="IgnoredFileRootStore">
     <option name="generatedRoots">
       <set>
-        <option value="C:\Users\Honor\Documents\GitHub\home-tasks-from-KFU\2nd sem\classwork #4 (AaSD) (Map)\.idea" />
+        <option value="C:\Users\Honor\Documents\GitHub\home-tasks-from-KFU\2nd sem\classwork #4 26.02.20\.idea" />
       </set>
     </option>
   </component>
-  <component name="ProjectId" id="1YkmvRk5iPk9Dhc4C2EDRvvRAbT" />
+  <component name="ProjectId" id="1YL1enKBsyCbBgV8DcCUJlCTrwm" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -49,7 +53,7 @@
   <component name="RunManager">
     <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Test" />
-      <module name="classwork #4 (AaSD) (Map)" />
+      <module name="classwork #4 26.02.20" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -65,15 +69,20 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="0768cd6b-8245-4dc4-a55b-c12295b0c3bf" name="Default Changelist" comment="" />
-      <created>1583495196165</created>
+      <changelist id="dd7b3a8f-d3aa-4faf-ba26-a2cb5ea0a383" name="Default Changelist" comment="" />
+      <created>1582707158002</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1583495196165</updated>
-      <workItem from="1583495203204" duration="1912000" />
-      <workItem from="1583534833755" duration="15066000" />
-      <workItem from="1583787545839" duration="615000" />
-      <workItem from="1584556868495" duration="975000" />
+      <updated>1582707158002</updated>
+      <workItem from="1582707161078" duration="4557000" />
+      <workItem from="1582712718567" duration="13626000" />
+      <workItem from="1582873401681" duration="940000" />
+      <workItem from="1583150710279" duration="1067000" />
+      <workItem from="1583492654670" duration="1105000" />
+      <workItem from="1583529259491" duration="923000" />
+      <workItem from="1583853974512" duration="834000" />
+      <workItem from="1584555205993" duration="529000" />
+      <workItem from="1584557262011" duration="639000" />
     </task>
     <servers />
   </component>
@@ -92,12 +101,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <watches-manager>
-      <configuration name="Application">
-        <watch expression="this.values.get(2)" />
-      </configuration>
-    </watches-manager>
   </component>
 </project>

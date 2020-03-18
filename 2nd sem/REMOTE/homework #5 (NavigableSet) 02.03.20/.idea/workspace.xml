@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0768cd6b-8245-4dc4-a55b-c12295b0c3bf" name="Default Changelist" comment="" />
+    <list default="true" id="32567a59-768c-4ff8-ae37-7b7582fcf211" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,18 +21,17 @@
   <component name="IgnoredFileRootStore">
     <option name="generatedRoots">
       <set>
-        <option value="C:\Users\Honor\Documents\GitHub\home-tasks-from-KFU\2nd sem\classwork #4 (AaSD) (Map)\.idea" />
+        <option value="C:\Users\Honor\Documents\GitHub\home-tasks-from-KFU\2nd sem\classwork #5 02.03.20\.idea" />
       </set>
     </option>
   </component>
-  <component name="ProjectId" id="1YkmvRk5iPk9Dhc4C2EDRvvRAbT" />
+  <component name="ProjectId" id="1YZXdDFwe3StRI6NQMT8tH0w1dv" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -46,10 +45,17 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Test">
+    <configuration name="MyNavigableSet" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MyNavigableSet" />
+      <module name="classwork #5 02.03.20" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Test" />
-      <module name="classwork #4 (AaSD) (Map)" />
+      <module name="classwork #5 02.03.20" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -57,6 +63,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Test" />
+        <item itemvalue="Application.MyNavigableSet" />
       </list>
     </recent_temporary>
   </component>
@@ -65,15 +72,25 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="0768cd6b-8245-4dc4-a55b-c12295b0c3bf" name="Default Changelist" comment="" />
-      <created>1583495196165</created>
+      <changelist id="32567a59-768c-4ff8-ae37-7b7582fcf211" name="Default Changelist" comment="" />
+      <created>1583151174479</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1583495196165</updated>
-      <workItem from="1583495203204" duration="1912000" />
-      <workItem from="1583534833755" duration="15066000" />
-      <workItem from="1583787545839" duration="615000" />
-      <workItem from="1584556868495" duration="975000" />
+      <updated>1583151174479</updated>
+      <workItem from="1583151182883" duration="3739000" />
+      <workItem from="1583311894308" duration="3610000" />
+      <workItem from="1583339280068" duration="15680000" />
+      <workItem from="1583391513932" duration="2673000" />
+      <workItem from="1583433379903" duration="11000" />
+      <workItem from="1583445155676" duration="2347000" />
+      <workItem from="1583450862498" duration="2473000" />
+      <workItem from="1583497111963" duration="4999000" />
+      <workItem from="1583527953393" duration="3794000" />
+      <workItem from="1583567251942" duration="2435000" />
+      <workItem from="1583788699937" duration="474000" />
+      <workItem from="1583872347579" duration="1256000" />
+      <workItem from="1584471720391" duration="12000" />
+      <workItem from="1584557266432" duration="593000" />
     </task>
     <servers />
   </component>
@@ -92,12 +109,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <watches-manager>
-      <configuration name="Application">
-        <watch expression="this.values.get(2)" />
-      </configuration>
-    </watches-manager>
   </component>
 </project>
