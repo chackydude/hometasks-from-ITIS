@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="32567a59-768c-4ff8-ae37-7b7582fcf211" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../classwork #1 (AaSD) 14.02.20/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classwork #1 (AaSD) 14.02.20/out/production/classwork #1 14.02.20/Queue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classwork #1 (AaSD) 14.02.20/out/production/classwork #1 14.02.20/Stack.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classwork #1 (AaSD) 14.02.20/out/production/classwork #1 14.02.20/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classwork #1 (AaSD) 14.02.20/src/Queue.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classwork #1 (AaSD) 14.02.20/src/Stack.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classwork #1 (AaSD) 14.02.20/src/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classwork #2 (AaSD) 21.02.20/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classwork #2 (AaSD) 21.02.20/out/production/classwork #2 (AaSD) 21.02.20/BubbleSort.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classwork #2 (AaSD) 21.02.20/out/production/classwork #2 (AaSD) 21.02.20/MultiSetInt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classwork #2 (AaSD) 21.02.20/out/production/classwork #2 (AaSD) 21.02.20/SetInt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classwork #2 (AaSD) 21.02.20/out/production/classwork #2 (AaSD) 21.02.20/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classwork #2 (AaSD) 21.02.20/src/BubbleSort.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classwork #2 (AaSD) 21.02.20/src/MultiSetInt.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classwork #2 (AaSD) 21.02.20/src/SetInt.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classwork #2 (AaSD) 21.02.20/src/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classwork #2 17.02.20/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classwork #2 17.02.20/out/production/classwork #2 17.02.20/Comparator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classwork #2 17.02.20/out/production/classwork #2 17.02.20/HeightStudentComparator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classwork #2 17.02.20/out/production/classwork #2 17.02.20/IqStudentComparator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classwork #2 17.02.20/out/production/classwork #2 17.02.20/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classwork #2 17.02.20/out/production/classwork #2 17.02.20/Number/FractionNumber.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classwork #2 17.02.20/out/production/classwork #2 17.02.20/Number/Number.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classwork #2 17.02.20/out/production/classwork #2 17.02.20/Number/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classwork #2 17.02.20/out/production/classwork #2 17.02.20/Student.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classwork #2 17.02.20/src/Comparator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classwork #2 17.02.20/src/HeightStudentComparator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classwork #2 17.02.20/src/IqStudentComparator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classwork #2 17.02.20/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classwork #2 17.02.20/src/Number/FractionNumber.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classwork #2 17.02.20/src/Number/Number.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classwork #2 17.02.20/src/Number/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classwork #2 17.02.20/src/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classwork #3 (AaSD) 28.02/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classwork #3 (AaSD) 28.02/out/production/classwork #3 (AaSD) 28.02/LinkedList$Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classwork #3 (AaSD) 28.02/out/production/classwork #3 (AaSD) 28.02/LinkedList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classwork #3 (AaSD) 28.02/out/production/classwork #3 (AaSD) 28.02/LinkedListOutOfBoundsException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classwork #3 (AaSD) 28.02/out/production/classwork #3 (AaSD) 28.02/META-INF/classwork #3 (AaSD) 28.02.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classwork #3 (AaSD) 28.02/out/production/classwork #3 (AaSD) 28.02/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classwork #3 (AaSD) 28.02/src/LinkedList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classwork #3 (AaSD) 28.02/src/LinkedListOutOfBoundsException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classwork #3 (AaSD) 28.02/src/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classwork #3 19.02.20/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classwork #3 19.02.20/out/production/classwork #3 19.02.20/META-INF/classwork #3 19.02.20.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classwork #3 19.02.20/out/production/classwork #3 19.02.20/ModifiedStringArrayIterator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classwork #3 19.02.20/out/production/classwork #3 19.02.20/StringArrayIterator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classwork #3 19.02.20/out/production/classwork #3 19.02.20/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classwork #3 19.02.20/out/production/classwork #3 19.02.20/UniqIterator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classwork #3 19.02.20/src/ModifiedStringArrayIterator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classwork #3 19.02.20/src/StringArrayIterator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classwork #3 19.02.20/src/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classwork #3 19.02.20/src/UniqIterator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classwork #4 26.02.20/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classwork #4 26.02.20/classwork #4 26.02.20.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classwork #4 26.02.20/out/production/classwork #4 26.02.20/InvariableCollection$CollectionIterator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classwork #4 26.02.20/out/production/classwork #4 26.02.20/InvariableCollection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classwork #4 26.02.20/out/production/classwork #4 26.02.20/META-INF/classwork #4 26.02.20.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classwork #4 26.02.20/out/production/classwork #4 26.02.20/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classwork #4 26.02.20/out/production/classwork #4 26.02.20/VariableCollection$CollectionIterator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classwork #4 26.02.20/out/production/classwork #4 26.02.20/VariableCollection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classwork #4 26.02.20/src/InvariableCollection.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classwork #4 26.02.20/src/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classwork #4 26.02.20/src/VariableCollection.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/classwork #5 02.03.20.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classwork #5 02.03.20/META-INF/classwork #5 02.03.20.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classwork #5 02.03.20/MyComparator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classwork #5 02.03.20/MyNavigableSet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classwork #5 02.03.20/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyComparator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyNavigableSet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hometask #1 14.02.20/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hometask #1 14.02.20/.idea/hometask #1 14.02.20.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hometask #1 14.02.20/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hometask #1 14.02.20/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hometask #1 14.02.20/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hometask #1 14.02.20/Comparable/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hometask #1 14.02.20/Comparable/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hometask #1 14.02.20/Comparable/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hometask #1 14.02.20/Comparable/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hometask #1 14.02.20/Comparable/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hometask #1 14.02.20/Comparable/Comparable.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hometask #1 14.02.20/Comparable/out/production/Comparable/Cat.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hometask #1 14.02.20/Comparable/out/production/Comparable/Student.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hometask #1 14.02.20/Comparable/out/production/Comparable/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hometask #1 14.02.20/Comparable/out/production/Comparable/Three.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hometask #1 14.02.20/Comparable/src/Cat.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hometask #1 14.02.20/Comparable/src/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hometask #1 14.02.20/Comparable/src/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hometask #1 14.02.20/Comparable/src/Three.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hometask #1 14.02.20/Generic EndlessArray/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hometask #1 14.02.20/Generic EndlessArray/2сем.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hometask #1 14.02.20/Generic EndlessArray/src/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hometask #1 14.02.20/Generic EndlessArray/src/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hometask #1 14.02.20/Generic EndlessArray/src/.idea/src.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hometask #1 14.02.20/Generic EndlessArray/src/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hometask #1 14.02.20/Generic EndlessArray/src/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hometask #1 14.02.20/Generic EndlessArray/src/EndlessArray.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hometask #1 14.02.20/Generic EndlessArray/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hometask #1 14.02.20/Generic Pare/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hometask #1 14.02.20/Generic Pare/out/production/untitled3/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hometask #1 14.02.20/Generic Pare/out/production/untitled3/Pare.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hometask #1 14.02.20/Generic Pare/src/Paire.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hometask #1 14.02.20/Generic Pare/src/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hometask #1 14.02.20/Generic Pare/untitled3.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework #2 24.02.20/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework #2 24.02.20/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework #2 24.02.20/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework #2 24.02.20/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework #2 24.02.20/homework #2 24.02.20.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework #2 24.02.20/out/production/homework #2 24.02.20/EndlessArray.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework #2 24.02.20/out/production/homework #2 24.02.20/EndlessArrayIterator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework #2 24.02.20/out/production/homework #2 24.02.20/Iterators/RandomIterator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework #2 24.02.20/out/production/homework #2 24.02.20/Iterators/StrangeIterator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework #2 24.02.20/out/production/homework #2 24.02.20/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework #2 24.02.20/src/EndlessArray.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework #2 24.02.20/src/EndlessArrayIterator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework #2 24.02.20/src/Iterators/RandomIterator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework #2 24.02.20/src/Iterators/StrangeIterator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework #2 24.02.20/src/Test.java" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="C:\Users\Honor\Documents\GitHub\home-tasks-from-KFU\2nd sem\classwork #5 02.03.20\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1YZXdDFwe3StRI6NQMT8tH0w1dv" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.Test">
+    <configuration name="MyNavigableSet" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MyNavigableSet" />
+      <module name="classwork #5 02.03.20" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Test" />
+      <module name="classwork #5 02.03.20" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Test" />
+        <item itemvalue="Application.MyNavigableSet" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="32567a59-768c-4ff8-ae37-7b7582fcf211" name="Default Changelist" comment="" />
+      <created>1583151174479</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1583151174479</updated>
+      <workItem from="1583151182883" duration="3739000" />
+      <workItem from="1583311894308" duration="3610000" />
+      <workItem from="1583339280068" duration="15680000" />
+      <workItem from="1583391513932" duration="2673000" />
+      <workItem from="1583433379903" duration="11000" />
+      <workItem from="1583445155676" duration="2739000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
