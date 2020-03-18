@@ -19,6 +19,7 @@ public class IOStream {
             InputStreamReader in = new InputStreamReader(stream, StandardCharsets.UTF_8);
             int i;
             while((i = in.read()) != -1) {
+                    // печать полученных данных
                     System.out.print((char) i);
             }
         } catch (IOException ex) {
