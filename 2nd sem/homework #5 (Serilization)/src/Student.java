@@ -1,8 +1,15 @@
 public class Student {
     private String name;
     private String gender;
-    private int data;
+    private int date;
     private int group;
+
+    public Student(String name, String gender, int date, int group) {
+        this.name = name;
+        this.gender = gender;
+        this.date = date;
+        this.group = group;
+    }
 
     public String getName() {
         return name;
@@ -20,12 +27,12 @@ public class Student {
         this.gender = gender;
     }
 
-    public int getData() {
-        return data;
+    public int getDate() {
+        return date;
     }
 
-    public void setData(int data) {
-        this.data = data;
+    public void setDate(int data) {
+        this.date = data;
     }
 
     public int getGroup() {
@@ -34,5 +41,10 @@ public class Student {
 
     public void setGroup(int group) {
         this.group = group;
+    }
+
+    @Override
+    public String toString() {
+        return "{" + this.name + ", " + this.gender + ", " + this.date + ", " + this.group + "}";
     }
 }
