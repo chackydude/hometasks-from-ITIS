@@ -24,7 +24,7 @@ public class IOStream_v2 {
             // запись
             FileOutputStream out = new FileOutputStream(file);
             out.write(result);
-//            out.write(arrInput2);
+            out.write(arrInput2);
             // считывание
             FileInputStream in = new FileInputStream(file);
             int j;
