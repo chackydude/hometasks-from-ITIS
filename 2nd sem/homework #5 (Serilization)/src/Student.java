@@ -1,10 +1,10 @@
 public class Student {
     private String name;
-    private String gender;
+    private char gender;
     private int date;
     private int group;
 
-    public Student(String name, String gender, int date, int group) {
+    public Student(String name, char gender, int date, int group) {
         this.name = name;
         this.gender = gender;
         this.date = date;
@@ -19,11 +19,11 @@ public class Student {
         this.name = name;
     }
 
-    public String getGender() {
+    public char getGender() {
         return gender;
     }
 
-    public void setGender(String gender) {
+    public void setGender(char gender) {
         this.gender = gender;
     }
 
