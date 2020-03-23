@@ -21,6 +21,7 @@ public class StudentDataOutputStream extends OutputStream {
             out.writeChar(gender);
             out.writeInt(date);
             out.writeInt(group);
+            out.flush();
         } catch (IOException ex) {
             System.out.println(ex.getMessage());
         }

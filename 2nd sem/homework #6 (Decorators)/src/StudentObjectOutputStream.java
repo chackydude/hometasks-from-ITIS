@@ -17,6 +17,7 @@ public class StudentObjectOutputStream {
         // | {| имя | пол | год | группа |} |* на количество объектов
         try {
             out.writeObject(student);
+            out.flush();
         } catch (IOException ex) {
             System.out.println(ex.getMessage());
         }
