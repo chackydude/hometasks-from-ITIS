@@ -1,0 +1,6 @@
+[config]
+ssd=500
+hdd=500
+[data]
+age=20
+height=180
