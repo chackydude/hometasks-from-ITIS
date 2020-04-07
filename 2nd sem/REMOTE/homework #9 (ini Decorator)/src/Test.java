@@ -2,6 +2,8 @@ import java.io.*;
 import java.sql.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Test {
     public static void main(String[] args) {
@@ -17,7 +19,7 @@ public class Test {
             System.out.println(ex.getMessage());
         }
         try(IniInputStream in = new IniInputStream(new FileInputStream(file))) {
-            ArrayList<ArrayList<String>> result = new ArrayList<>();
+            Map<String, String> result = new HashMap<>();
             result = in.readIni();
             System.out.println(result);
         } catch (IOException ex) {
